@@ -1,0 +1,54 @@
+# Ad compliance policy for the Lumière Velvet Matte Lipstick campaign.
+# Thresholds are starting points, to be tuned against reviewer labels.
+
+version: 1
+
+campaign:
+  brand: Lumière
+  product: Velvet Matte Lipstick
+  brief: >
+    Creator tutorials and product demos showing Lumière Velvet Matte Lipstick
+    being applied and worn.
+  relevance_queries:
+    - "applying lipstick to lips"
+    - "close-up of a lipstick bullet"
+
+relevance:
+  on_brief_min: 70   # Pegasus score >= 70 -> ON_BRIEF
+  weak_min: 40       # 40-69 -> WEAK (REVIEW); below 40 -> OFF_BRIEF (BLOCK)
+  # If Pegasus says ON_BRIEF but Marengo finds less than this many seconds of
+  # product footage (or vice versa), route to REVIEW as a model disagreement.
+  marengo_min_product_seconds: 3
+
+thresholds:
+  block_confidence: 0.7
+  corroboration_tolerance_sec: 2
+
+categories:
+  hate_harassment:
+    definition: Slurs, demeaning remarks about identity or appearance, bullying or body-shaming.
+    default_severity: high
+    marengo_queries: ["person mocking someone's appearance"]
+  drugs_illegal:
+    definition: Drug use, drug paraphernalia, underage drinking, or other illegal acts.
+    default_severity: high
+    marengo_queries: ["person smoking", "pills on a table"]
+  profanity:
+    definition: Swearing (mild = e.g. "damn", strong = e.g. the f-word) or sexually explicit language.
+    default_severity: low
+    tolerance:
+      mild_max_count: 2   # more mild instances -> REVIEW; strong -> REVIEW; explicit -> BLOCK
+  unsafe_usage:
+    definition: >
+      Unsafe or misleading product application, e.g. liner on the inner waterline,
+      lip product used on the eyes, applying on broken skin, shared applicators.
+    default_severity: medium
+    marengo_queries:
+      - "applying eyeliner to the inner waterline"
+      - "makeup applied near the eyeball"
+  medical_claims:
+    definition: >
+      Health or medical claims, e.g. cures or treats a condition, permanent results,
+      unsupported "clinically proven" or dermatologist claims.
+    default_severity: medium
+    marengo_queries: []

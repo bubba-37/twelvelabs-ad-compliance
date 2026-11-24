@@ -1,0 +1,3 @@
+twelvelabs>=1.0
+pyyaml
+python-dotenv

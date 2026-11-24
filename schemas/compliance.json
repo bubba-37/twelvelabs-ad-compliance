@@ -1,0 +1,32 @@
+{
+  "type": "object",
+  "properties": {
+    "description": {"type": "string"},
+    "relevance": {
+      "type": "object",
+      "properties": {
+        "score": {"type": "integer"},
+        "product_on_screen_seconds": {"type": "number"},
+        "rationale": {"type": "string"}
+      },
+      "required": ["score", "product_on_screen_seconds", "rationale"]
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {"type": "string", "enum": ["hate_harassment", "drugs_illegal", "profanity", "unsafe_usage", "medical_claims"]},
+          "severity": {"type": "string", "enum": ["low", "medium", "high"]},
+          "start_sec": {"type": "number"},
+          "end_sec": {"type": "number"},
+          "modality": {"type": "string", "enum": ["visual", "speech", "on_screen_text"]},
+          "evidence": {"type": "string"},
+          "confidence": {"type": "number"}
+        },
+        "required": ["category", "severity", "start_sec", "end_sec", "modality", "evidence", "confidence"]
+      }
+    }
+  },
+  "required": ["description", "relevance", "findings"]
+}

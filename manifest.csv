@@ -1,0 +1,11 @@
+file,source_url,license,edits,expected_decision,expected_relevance,violations
+01_clean_tutorial.mp4,,,"brand card overlay",APPROVE,ON_BRIEF,
+02_clean_grwm.mp4,,,"brand card overlay",APPROVE,ON_BRIEF,
+03_clean_demo.mp4,,,"brand card overlay",APPROVE,ON_BRIEF,
+04_weak_vlog.mp4,,,"lipstick on screen ~2s",REVIEW,WEAK,
+05_offbrief_clickbait.mp4,,,"none",BLOCK,OFF_BRIEF,
+06_offbrief_skincare.mp4,,,"none",BLOCK,OFF_BRIEF,
+07_mild_profanity.mp4,,,"voiceover with 1-2 mild swears",APPROVE,ON_BRIEF,profanity:START-END
+08_medical_claim.mp4,,,"caption: Cures acne in 3 days",REVIEW,ON_BRIEF,medical_claims:START-END
+09_unsafe_waterline.mp4,,,"liner on inner waterline",REVIEW,ON_BRIEF,unsafe_usage:START-END
+10_drugs_background.mp4,,,"2s smoking/pills cut-in",BLOCK,ON_BRIEF,drugs_illegal:START-END

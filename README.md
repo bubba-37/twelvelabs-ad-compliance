@@ -77,9 +77,30 @@ python src/evaluate.py
 
 ## Test set
 
-10 short clips built from royalty-free stock footage with violations edited in, so ground truth
+12 short clips built from royalty-free stock footage with violations edited in, so ground truth
 (including violation timestamps) is known. See `manifest.csv`. No real creators or brands are used.
 
 ## Limitations and next steps
 
-TODO
+- **Clip 09 (`09_unsafe_application.mp4`) is a known gap, not a solid example.** The advertiser's
+  stated concern is unsafe product usage near the eye area. We could not source or build footage
+  of the actual lipstick being misapplied that way, so this clip substitutes loose eyeshadow
+  pigment with an on-screen "Lumière Velvet Matte" label burned in. Pegasus's `unsafe_usage`
+  finding on this clip is really reacting to a mislabeled product, not a lipstick being misused —
+  it should be rebuilt with real footage before being cited as evidence the pipeline catches
+  unsafe application. Left as-is (rather than further doctored) so the gap stays visible.
+- That gap is itself a live instance of the stated challenge that subtle, improper, or unsafe
+  product application is hard to catch: it was hard enough that even hand-building a clean example
+  for our own test set didn't work out.
+- A related finding points at the same challenge from the model's side: clip 12
+  (`12_messy_but_harmless.mp4`) shows a creator's lipstick smearing messily across her mouth and
+  chin, but Pegasus's description says she "applies the product carefully" and never mentions it.
+  The clip still gets the right decision (APPROVE — it's genuinely harmless), but only because the
+  model didn't perceive the visual detail, not because it correctly judged a silly presentation as
+  safe. Worth watching for in the full eval, not just in this one clip.
+- The test set is small (12 hand-built clips) and skewed toward clear-cut cases; `evaluate.py`'s
+  own output already says as much. A real POC needs hundreds of customer-labeled videos before
+  the accuracy numbers mean anything.
+- `corroborate.py` searches the whole index per clip and filters client-side by `indexed_asset_id`
+  (see its docstring) — fine at this scale, but should filter server-side or compare embeddings
+  directly once the index has more than a handful of videos.

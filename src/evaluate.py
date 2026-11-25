@@ -1,9 +1,12 @@
 """Step 9b: compare results against manifest.csv ground truth -> results/eval.md
 
-Manifest 'violations' format: category:start-end;category:start-end  (seconds)
+Manifest 'violations' format: category:start-end;category:start-end  (seconds).
+Trailing text after the end second (e.g. a parenthetical evidence quote) is allowed
+and ignored, so human-readable annotations don't need a separate field.
 """
 import csv
 import json
+import re
 from collections import Counter
 
 from tl_client import MANIFEST_PATH, RESULTS_DIR, load_policy
@@ -11,16 +14,17 @@ from tl_client import MANIFEST_PATH, RESULTS_DIR, load_policy
 DECISIONS = ["APPROVE", "REVIEW", "BLOCK"]
 tol = load_policy()["thresholds"]["corroboration_tolerance_sec"]
 
+RANGE_RE = re.compile(r"^\s*([\d.]+)\s*-\s*([\d.]+)")
+
 
 def parse_violations(s):
     out = []
     for part in filter(None, (p.strip() for p in (s or "").split(";"))):
         cat, _, rng = part.partition(":")
-        try:
-            start, end = (float(x) for x in rng.split("-"))
-        except ValueError:
+        m = RANGE_RE.match(rng)
+        if not m:
             continue  # placeholder like START-END not filled in yet
-        out.append((cat.strip(), start, end))
+        out.append((cat.strip(), float(m.group(1)), float(m.group(2))))
     return out
 
 

@@ -37,7 +37,10 @@ categories:
     default_severity: high
     marengo_queries: ["person smoking", "pills on a table"]
   profanity:
-    definition: Swearing (mild = e.g. "damn", strong = e.g. the f-word) or sexually explicit language.
+    definition: >
+      Swearing or sexually explicit language. Rate severity low for mild swearing (e.g.
+      "damn"), medium for strong swearing (e.g. the f-word), and high only for sexually
+      explicit language - the f-word alone is strong, not explicit.
     default_severity: low
     tolerance:
       mild_max_count: 2   # more mild instances -> REVIEW; strong -> REVIEW; explicit -> BLOCK

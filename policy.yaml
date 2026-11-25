@@ -28,6 +28,9 @@ categories:
   hate_harassment:
     definition: Slurs, demeaning remarks about identity or appearance, bullying or body-shaming.
     default_severity: high
+    # Untested against a true positive: the test set has no clip depicting hate/harassment
+    # content, so this query (and several rephrasings tried) can only ever rank an unrelated
+    # clip first. Needs a planted example clip before this can be tuned or trusted.
     marengo_queries: ["person mocking someone's appearance"]
   drugs_illegal:
     definition: Drug use, drug paraphernalia, underage drinking, or other illegal acts.
@@ -43,6 +46,11 @@ categories:
       Unsafe or misleading product application, e.g. liner on the inner waterline,
       lip product used on the eyes, applying on broken skin, shared applicators.
     default_severity: medium
+    # Untested against a true positive: the test set's only unsafe_usage example
+    # (09_unsafe_application.mp4) is a purely spoken violation over normal-looking footage,
+    # so no visual query (several rephrasings tried) can corroborate it. Harmless to scoring -
+    # corroborate.py skips visual corroboration for speech/on-screen-text findings - but these
+    # queries need a visually-unsafe example clip before they can be validated or trusted.
     marengo_queries:
       - "applying eyeliner to the inner waterline"
       - "makeup applied near the eyeball"

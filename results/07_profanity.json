@@ -74,7 +74,7 @@
     "index_model": "marengo3.0",
     "prompt_version": "v1",
     "policy_version": 1,
-    "policy_sha256": "80559333fb4e",
-    "run_at": "2026-11-25T17:21:09.371832+00:00"
+    "policy_sha256": "395f11a82bac",
+    "run_at": "2026-11-25T18:26:07.518953+00:00"
   }
 }

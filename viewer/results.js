@@ -53,8 +53,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:05.681525+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:02.910903+00:00"
     }
   },
   {
@@ -83,7 +83,7 @@ const RESULTS = [
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 8.533332824707031,
-          "rank": 13
+          "rank": 11
         }
       ]
     },
@@ -99,8 +99,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:06.252419+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:03.642171+00:00"
     }
   },
   {
@@ -141,7 +141,7 @@ const RESULTS = [
           "query": "close-up of a lipstick bullet",
           "start": 7.933332920074463,
           "end": 15.0,
-          "rank": 9
+          "rank": 7
         }
       ]
     },
@@ -157,8 +157,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:06.860848+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:05.103783+00:00"
     }
   },
   {
@@ -181,13 +181,13 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 6.933332920074463,
-          "rank": 13
+          "rank": 11
         },
         {
           "query": "applying lipstick to lips",
           "start": 6.933332920074463,
           "end": 12.0,
-          "rank": 17
+          "rank": 16
         },
         {
           "query": "close-up of a lipstick bullet",
@@ -215,8 +215,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:07.532475+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:05.737940+00:00"
     }
   },
   {
@@ -248,8 +248,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:08.165605+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:06.380439+00:00"
     }
   },
   {
@@ -294,8 +294,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:08.803025+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:06.926539+00:00"
     }
   },
   {
@@ -374,8 +374,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:09.371832+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:07.518953+00:00"
     }
   },
   {
@@ -442,8 +442,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:10.018259+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:08.234698+00:00"
     }
   },
   {
@@ -510,8 +510,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:10.670963+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:08.777544+00:00"
     }
   },
   {
@@ -579,8 +579,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:11.530908+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:09.698044+00:00"
     }
   },
   {
@@ -603,7 +603,7 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 11.0,
-          "rank": 21
+          "rank": 20
         }
       ]
     },
@@ -619,8 +619,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:12.171366+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:10.344208+00:00"
     }
   },
   {
@@ -649,13 +649,13 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 9.0,
           "end": 18.0,
-          "rank": 11
+          "rank": 13
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 9.0,
-          "rank": 10
+          "rank": 9
         },
         {
           "query": "close-up of a lipstick bullet",
@@ -677,8 +677,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:12.745130+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:10.982409+00:00"
     }
   },
   {
@@ -707,7 +707,7 @@ const RESULTS = [
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 13.0,
-          "rank": 3
+          "rank": 4
         }
       ]
     },
@@ -734,8 +734,8 @@ const RESULTS = [
       "index_model": "marengo3.0",
       "prompt_version": "v1",
       "policy_version": 1,
-      "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:21:13.314688+00:00"
+      "policy_sha256": "395f11a82bac",
+      "run_at": "2026-11-25T18:26:11.620779+00:00"
     }
   }
 ];

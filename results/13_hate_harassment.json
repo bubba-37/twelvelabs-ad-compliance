@@ -24,7 +24,7 @@
         "query": "close-up of a lipstick bullet",
         "start": 0.0,
         "end": 13.0,
-        "rank": 3
+        "rank": 4
       }
     ]
   },
@@ -51,7 +51,7 @@
     "index_model": "marengo3.0",
     "prompt_version": "v1",
     "policy_version": 1,
-    "policy_sha256": "80559333fb4e",
-    "run_at": "2026-11-25T17:21:13.314688+00:00"
+    "policy_sha256": "395f11a82bac",
+    "run_at": "2026-11-25T18:26:11.620779+00:00"
   }
 }

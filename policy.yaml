@@ -28,9 +28,12 @@ categories:
   hate_harassment:
     definition: Slurs, demeaning remarks about identity or appearance, bullying or body-shaming.
     default_severity: high
-    # Untested against a true positive: the test set has no clip depicting hate/harassment
-    # content, so this query (and several rephrasings tried) can only ever rank an unrelated
-    # clip first. Needs a planted example clip before this can be tuned or trusted.
+    # The category itself is now tested (13_hate_harassment.mp4, caught correctly at high
+    # severity), but still can't be corroborated visually: that clip's violation is a purely
+    # spoken body-shaming remark over normal-looking footage (we deliberately avoided slurs or
+    # explicit language), so this query still ranks an unrelated clip first. Harmless to
+    # scoring - corroborate.py skips visual corroboration for speech findings - but a
+    # visually-depicted example would be needed to validate or tune this query.
     marengo_queries: ["person mocking someone's appearance"]
   drugs_illegal:
     definition: Drug use, drug paraphernalia, underage drinking, or other illegal acts.

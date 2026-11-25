@@ -77,7 +77,7 @@ python src/evaluate.py
 
 ## Test set
 
-12 short clips built from royalty-free stock footage with violations edited in, so ground truth
+13 short clips built from royalty-free stock footage with violations edited in, so ground truth
 (including violation timestamps) is known. See `manifest.csv`. No real creators or brands are used.
 
 ## Limitations and next steps

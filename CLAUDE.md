@@ -40,10 +40,17 @@ As of the last check (twelvelabs **1.3.8**, which was also the latest on PyPI), 
 in `src/` (`client.assets.create/retrieve`, `client.indexes.create`,
 `client.indexes.indexed_assets.create/retrieve`, `client.analyze` with `AnalyzePromptV2` /
 `SyncResponseFormat` / `VideoContext_AssetId`, `client.search.query`) all matched the installed
-package's real signatures. `clips/` is currently empty (just `.gitkeep`), so nothing has
-actually been exercised end-to-end yet — the first real failure is more likely to show up at
-runtime (auth, async readiness timing, response shape surprises) than at the call-signature
-level. Re-verify against the installed package if the `twelvelabs` version changes.
+package's real signatures. Re-verify against the installed package if the `twelvelabs` version
+changes.
+
+`src/ingest.py` has now been run end-to-end against the real API for all 11 clips in
+`clips/` with no SDK mismatches — asset upload, indexing, and `wait_ready` polling all worked
+as written. One open question from the code's own comments is now settled: in
+`client.search.query` results, `SearchItem.video_id` always equals the clip's
+**`indexed_asset_id`**, never its `asset_id` (confirmed against the real index with 17 search
+hits, 0 matching `asset_id`). `src/corroborate.py`'s `_clip_ids()` already checks a set
+containing both, so no code change was needed there — but if that filtering logic is ever
+simplified, don't drop the `indexed_asset_id` side.
 
 ## Secrets
 The TwelveLabs API key lives in `.env` (`TWELVELABS_API_KEY`). **Never print it, echo it, or

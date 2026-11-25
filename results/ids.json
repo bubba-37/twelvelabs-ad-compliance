@@ -1,0 +1,46 @@
+{
+  "01_clean_tutorial.mp4": {
+    "asset_id": "6b06d472940759a5eecbd020",
+    "indexed_asset_id": "6b06d477940759a5eecbd021"
+  },
+  "02_clean_grwm.mp4": {
+    "asset_id": "6b06d482940759a5eecbd022",
+    "indexed_asset_id": "6b06d488cfd36fe301e84cc1"
+  },
+  "03_clean_demo.mp4": {
+    "asset_id": "6b06d4982316e8b3121da3d3",
+    "indexed_asset_id": "6b06d49e2028fde55c7d6aa2"
+  },
+  "04_weak_vlog.mp4": {
+    "asset_id": "6b06d4a9269d9b87d5bcbcef",
+    "indexed_asset_id": "6b06d4af269d9b87d5bcbcf8"
+  },
+  "05_offbrief_clickbait.mp4": {
+    "asset_id": "6b06d4ba940759a5eecbd048",
+    "indexed_asset_id": "6b06d4c02028fde55c7d6ab3"
+  },
+  "06_offbrief_lipstick_craft.mp4": {
+    "asset_id": "6b06d4d031690ee85f22aaf2",
+    "indexed_asset_id": "6b06d4d6ce1f5339fb0ab585"
+  },
+  "07_mild_profanity.mp4": {
+    "asset_id": "6b06d4e12028fde55c7d6aca",
+    "indexed_asset_id": "6b06d4e7269d9b87d5bcbd1a"
+  },
+  "08_medical_claim.mp4": {
+    "asset_id": "6b06d4f2cfd36fe301e84d03",
+    "indexed_asset_id": "6b06d4f831690ee85f22ab04"
+  },
+  "09_unsafe_application.mp4": {
+    "asset_id": "6b06d503ce1f5339fb0ab591",
+    "indexed_asset_id": "6b06d508cfd36fe301e84d16"
+  },
+  "10_drugs_background.mp4": {
+    "asset_id": "6b06d514940759a5eecbd098",
+    "indexed_asset_id": "6b06d519cfd36fe301e84d1f"
+  },
+  "11_offbrief_skincare.mp4": {
+    "asset_id": "6b06d529cfd36fe301e84d21",
+    "indexed_asset_id": "6b06d52f31690ee85f22ab3b"
+  }
+}

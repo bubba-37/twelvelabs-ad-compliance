@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 clips/*.mp4
 clips/*.mov
+clips/raw/*.mp4
+clips/raw/*.mov
+clips/raw/*.m4a

@@ -1,0 +1,54 @@
+# Source attribution for clips/raw/*.mp4
+# Derived from macOS download metadata (kMDItemWhereFroms) and filename conventions.
+# Format: filename | site | url
+#
+# Mixkit URLs reconstructed from the filename pattern mixkit-<slug>-<id>-hd-ready.mp4
+# -> https://mixkit.co/free-stock-video/<slug>-<id>/ ; confirmed live on 2 sample pages
+# (woman-applying-pink-lipstick-371, 52061-video-52061) so treated as reliable for the rest.
+# Pexels/Pixabay could not be re-verified: both sites return an HTTP 403 Cloudflare
+# challenge to automated requests (confirmed with curl), so only the URL already present
+# in kMDItemWhereFroms could be used as-is; URLs marked "best-effort" are a bare-ID
+# permalink built from the filename/CDN id, not confirmed to resolve.
+
+12004-234428494_medium.mp4 | Pixabay | UNKNOWN (no slug in metadata; CDN: https://cdn.pixabay.com/video/2017/09/15/12004-234428494_medium.mp4, id 12004)
+12322668-hd_1080_1920_30fps.mp4 | Pexels | https://www.pexels.com/video/12322668/ (best-effort, slug unknown)
+1596893-hd_1920_1080_30fps.mp4 | Pexels | https://www.pexels.com/video/woman-putting-lip-gloss-1596893/
+270065.mp4 | Pixabay | UNKNOWN (no slug in metadata; CDN: https://cdn.pixabay.com/video/2025/04/06/270065.mp4, id 270065)
+46450-447448197.mp4 | Pixabay | UNKNOWN (no slug in metadata; CDN: https://cdn.pixabay.com/video/2020/08/05/46450-447448197.mp4, id 46450)
+47438-451297228_medium.mp4 | Pixabay | UNKNOWN (no slug in metadata; CDN: https://cdn.pixabay.com/video/2020/08/17/47438-451297228_medium.mp4, id 47438)
+4813455-uhd_2160_4096_25fps.mp4 | Pexels | https://www.pexels.com/video/4813455/ (best-effort, slug unknown)
+6868397-hd_1080_1920_25fps.mp4 | Pexels | https://www.pexels.com/video/woman-applying-red-lipstick-6868397/
+7230870-uhd_3840_2160_25fps.mp4 | Pexels | https://www.pexels.com/video/female-in-handcuffs-holding-packets-of-drugs-7230870/
+7667377-uhd_3840_2160_30fps.mp4 | Pexels | https://www.pexels.com/video/a-man-preparing-cannabis-7667377/
+7677111-hd_1920_1080_25fps.mp4 | Pexels | https://www.pexels.com/video/7677111/ (best-effort, slug unknown)
+8449554-uhd_3840_2160_25fps.mp4 | Pexels | https://www.pexels.com/video/close-up-shot-of-a-woman-applying-lipstick-8449554/
+9477-219900745_medium.mp4 | Pixabay | UNKNOWN (no slug in metadata; CDN: https://cdn.pixabay.com/video/2017/06/01/9477-219900745_medium.mp4, id 9477)
+mixkit-52061-video-52061-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/52061-video-52061/
+mixkit-beer-bar-atmosphere-8711-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/beer-bar-atmosphere-8711/
+mixkit-girl-puting-lipstick-to-decorate-a-valentine-card-with-a-44847-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/girl-puting-lipstick-to-decorate-a-valentine-card-with-a-44847/
+mixkit-group-of-friends-having-fun-playing-together-online-43524-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/group-of-friends-having-fun-playing-together-online-43524/
+mixkit-group-of-men-playing-video-games-at-home-23949-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/group-of-men-playing-video-games-at-home-23949/
+mixkit-heroin-addict-preparing-a-dose-33713-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/heroin-addict-preparing-a-dose-33713/
+mixkit-person-taking-a-pill-among-other-drugs-34269-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/person-taking-a-pill-among-other-drugs-34269/
+mixkit-preparing-a-marijuana-cigarette-40566-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/preparing-a-marijuana-cigarette-40566/
+mixkit-stylish-woman-smoking-sitting-next-to-sports-car-44544-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/stylish-woman-smoking-sitting-next-to-sports-car-44544/
+mixkit-top-view-of-a-woman-slicing-vegetables-40524-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/top-view-of-a-woman-slicing-vegetables-40524/
+mixkit-woman-applying-makeup-to-her-eyes-27835-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/woman-applying-makeup-to-her-eyes-27835/
+mixkit-woman-applying-pink-lipstick-371-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/woman-applying-pink-lipstick-371/
+mixkit-young-woman-dancing-and-performing-with-hands-49095-hd-ready.mp4 | Mixkit | https://mixkit.co/free-stock-video/young-woman-dancing-and-performing-with-hands-49095/
+
+# Could not trace to an exact page URL (site is known from kMDItemWhereFroms' CDN domain
+# and a numeric id was recovered from the filename, but no slug was present in metadata,
+# and Pixabay could not be probed live to confirm whether a slug-less URL resolves):
+12004-234428494_medium.mp4 (Pixabay, id 12004)
+270065.mp4 (Pixabay, id 270065)
+46450-447448197.mp4 (Pixabay, id 46450)
+47438-451297228_medium.mp4 (Pixabay, id 47438)
+9477-219900745_medium.mp4 (Pixabay, id 9477)
+
+# Marked "best-effort" above (Pexels, site+id certain from metadata/CDN url, but the
+# human-readable slug in the URL is unconfirmed because pexels.com returns a Cloudflare
+# challenge to automated requests, blocking live verification):
+12322668-hd_1080_1920_30fps.mp4 (Pexels, id 12322668)
+4813455-uhd_2160_4096_25fps.mp4 (Pexels, id 4813455)
+7677111-hd_1920_1080_25fps.mp4 (Pexels, id 7677111)

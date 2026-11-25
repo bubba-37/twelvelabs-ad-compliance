@@ -18,7 +18,7 @@
         "query": "applying lipstick to lips",
         "start": 0.0,
         "end": 11.0,
-        "rank": 20
+        "rank": 21
       }
     ]
   },
@@ -35,6 +35,6 @@
     "prompt_version": "v1",
     "policy_version": 1,
     "policy_sha256": "80559333fb4e",
-    "run_at": "2026-11-25T17:00:13.540126+00:00"
+    "run_at": "2026-11-25T17:21:12.171366+00:00"
   }
 }

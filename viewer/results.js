@@ -25,7 +25,7 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 7.960000038146973,
           "end": 16.0,
-          "rank": 9
+          "rank": 10
         },
         {
           "query": "close-up of a lipstick bullet",
@@ -37,7 +37,7 @@ const RESULTS = [
           "query": "close-up of a lipstick bullet",
           "start": 7.960000038146973,
           "end": 16.0,
-          "rank": 6
+          "rank": 7
         }
       ]
     },
@@ -54,7 +54,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:07.019000+00:00"
+      "run_at": "2026-11-25T17:21:05.681525+00:00"
     }
   },
   {
@@ -77,13 +77,13 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 8.533332824707031,
-          "rank": 6
+          "rank": 7
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 8.533332824707031,
-          "rank": 12
+          "rank": 13
         }
       ]
     },
@@ -100,7 +100,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:07.773308+00:00"
+      "run_at": "2026-11-25T17:21:06.252419+00:00"
     }
   },
   {
@@ -129,7 +129,7 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 7.933332920074463,
           "end": 15.0,
-          "rank": 4
+          "rank": 5
         },
         {
           "query": "close-up of a lipstick bullet",
@@ -141,7 +141,7 @@ const RESULTS = [
           "query": "close-up of a lipstick bullet",
           "start": 7.933332920074463,
           "end": 15.0,
-          "rank": 8
+          "rank": 9
         }
       ]
     },
@@ -158,7 +158,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:08.411138+00:00"
+      "run_at": "2026-11-25T17:21:06.860848+00:00"
     }
   },
   {
@@ -181,25 +181,25 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 6.933332920074463,
-          "rank": 10
+          "rank": 13
         },
         {
           "query": "applying lipstick to lips",
           "start": 6.933332920074463,
           "end": 12.0,
-          "rank": 15
+          "rank": 17
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 6.933332920074463,
-          "rank": 4
+          "rank": 5
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 6.933332920074463,
           "end": 12.0,
-          "rank": 13
+          "rank": 14
         }
       ]
     },
@@ -216,7 +216,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:08.989142+00:00"
+      "run_at": "2026-11-25T17:21:07.532475+00:00"
     }
   },
   {
@@ -249,7 +249,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:09.644910+00:00"
+      "run_at": "2026-11-25T17:21:08.165605+00:00"
     }
   },
   {
@@ -272,13 +272,13 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 6.933332920074463,
-          "rank": 7
+          "rank": 8
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 6.933332920074463,
-          "rank": 5
+          "rank": 6
         }
       ]
     },
@@ -295,7 +295,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:10.266263+00:00"
+      "run_at": "2026-11-25T17:21:08.803025+00:00"
     }
   },
   {
@@ -319,25 +319,25 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 8.533332824707031,
-          "rank": 14
+          "rank": 15
         },
         {
           "query": "applying lipstick to lips",
           "start": 8.533332824707031,
           "end": 17.0,
-          "rank": 17
+          "rank": 18
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 8.533332824707031,
-          "rank": 15
+          "rank": 16
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 8.533332824707031,
           "end": 17.0,
-          "rank": 18
+          "rank": 19
         }
       ]
     },
@@ -375,7 +375,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:10.826989+00:00"
+      "run_at": "2026-11-25T17:21:09.371832+00:00"
     }
   },
   {
@@ -399,13 +399,13 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 10.0,
-          "rank": 11
+          "rank": 12
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 10.0,
-          "rank": 16
+          "rank": 17
         }
       ]
     },
@@ -443,7 +443,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:11.560274+00:00"
+      "run_at": "2026-11-25T17:21:10.018259+00:00"
     }
   },
   {
@@ -467,13 +467,13 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 12.0,
-          "rank": 13
+          "rank": 14
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 12.0,
-          "rank": 14
+          "rank": 15
         }
       ]
     },
@@ -511,7 +511,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:12.101936+00:00"
+      "run_at": "2026-11-25T17:21:10.670963+00:00"
     }
   },
   {
@@ -534,25 +534,25 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 10.666666984558105,
-          "rank": 3
+          "rank": 4
         },
         {
           "query": "applying lipstick to lips",
           "start": 10.666666984558105,
           "end": 22.066667556762695,
-          "rank": 15
+          "rank": 16
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 10.666666984558105,
-          "rank": 3
+          "rank": 4
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 10.666666984558105,
           "end": 22.066667556762695,
-          "rank": 10
+          "rank": 11
         }
       ]
     },
@@ -580,7 +580,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:12.906437+00:00"
+      "run_at": "2026-11-25T17:21:11.530908+00:00"
     }
   },
   {
@@ -603,7 +603,7 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 11.0,
-          "rank": 20
+          "rank": 21
         }
       ]
     },
@@ -620,7 +620,7 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:13.540126+00:00"
+      "run_at": "2026-11-25T17:21:12.171366+00:00"
     }
   },
   {
@@ -643,25 +643,25 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 9.0,
-          "rank": 8
+          "rank": 9
         },
         {
           "query": "applying lipstick to lips",
           "start": 9.0,
           "end": 18.0,
-          "rank": 12
+          "rank": 11
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 9.0,
-          "rank": 9
+          "rank": 10
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 9.0,
           "end": 18.0,
-          "rank": 11
+          "rank": 12
         }
       ]
     },
@@ -678,7 +678,64 @@ const RESULTS = [
       "prompt_version": "v1",
       "policy_version": 1,
       "policy_sha256": "80559333fb4e",
-      "run_at": "2026-11-25T17:00:14.178506+00:00"
+      "run_at": "2026-11-25T17:21:12.745130+00:00"
+    }
+  },
+  {
+    "file": "13_hate_harassment.mp4",
+    "decision": "BLOCK",
+    "reasons": [
+      "BLOCK: high-severity hate_harassment at 1s (conf 0.95): SPEAKER_00: 'Before I got my hands on her, she genuinely looked basic. Like she rolled out of a dumpster. Like actually disgusting.'"
+    ],
+    "description": "A close-up video shows a woman applying Lumière Velvet Matte lipstick to her lips while looking into a mirror. The product name is displayed on screen as she carefully applies the lip color. The audio features a voiceover making derogatory and insulting remarks about someone's appearance, describing them as 'basic,' 'rolled out of a dumpster,' and 'disgusting.'",
+    "relevance": {
+      "score": 85,
+      "product_on_screen_seconds": 11.0,
+      "rationale": "The video clearly demonstrates the application of the campaign product (Lumière Velvet Matte Lipstick) with on-screen text identifying the product, aligning well with the tutorial/demo brief.",
+      "label": "ON_BRIEF"
+    },
+    "marengo_relevance": {
+      "product_seconds": 26.0,
+      "matches": [
+        {
+          "query": "applying lipstick to lips",
+          "start": 0.0,
+          "end": 13.0,
+          "rank": 3
+        },
+        {
+          "query": "close-up of a lipstick bullet",
+          "start": 0.0,
+          "end": 13.0,
+          "rank": 3
+        }
+      ]
+    },
+    "findings": [
+      {
+        "category": "hate_harassment",
+        "severity": "high",
+        "start_sec": 1.44,
+        "end_sec": 10.32,
+        "modality": "speech",
+        "evidence": "SPEAKER_00: 'Before I got my hands on her, she genuinely looked basic. Like she rolled out of a dumpster. Like actually disgusting.'",
+        "confidence": 0.95,
+        "corroboration": "n/a (speech/on-screen text: verbatim quote is the evidence)"
+      }
+    ],
+    "checks": {
+      "description_sentences": 3,
+      "description_ok": true,
+      "finish_reason": "stop"
+    },
+    "audit": {
+      "asset_id": "6b0718c431690ee85f22e8be",
+      "analysis_model": "pegasus1.6",
+      "index_model": "marengo3.0",
+      "prompt_version": "v1",
+      "policy_version": 1,
+      "policy_sha256": "80559333fb4e",
+      "run_at": "2026-11-25T17:21:13.314688+00:00"
     }
   }
 ];

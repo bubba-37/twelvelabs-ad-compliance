@@ -1,0 +1,57 @@
+{
+  "file": "13_hate_harassment.mp4",
+  "decision": "BLOCK",
+  "reasons": [
+    "BLOCK: high-severity hate_harassment at 1s (conf 0.95): SPEAKER_00: 'Before I got my hands on her, she genuinely looked basic. Like she rolled out of a dumpster. Like actually disgusting.'"
+  ],
+  "description": "A close-up video shows a woman applying Lumière Velvet Matte lipstick to her lips while looking into a mirror. The product name is displayed on screen as she carefully applies the lip color. The audio features a voiceover making derogatory and insulting remarks about someone's appearance, describing them as 'basic,' 'rolled out of a dumpster,' and 'disgusting.'",
+  "relevance": {
+    "score": 85,
+    "product_on_screen_seconds": 11.0,
+    "rationale": "The video clearly demonstrates the application of the campaign product (Lumière Velvet Matte Lipstick) with on-screen text identifying the product, aligning well with the tutorial/demo brief.",
+    "label": "ON_BRIEF"
+  },
+  "marengo_relevance": {
+    "product_seconds": 26.0,
+    "matches": [
+      {
+        "query": "applying lipstick to lips",
+        "start": 0.0,
+        "end": 13.0,
+        "rank": 3
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 0.0,
+        "end": 13.0,
+        "rank": 3
+      }
+    ]
+  },
+  "findings": [
+    {
+      "category": "hate_harassment",
+      "severity": "high",
+      "start_sec": 1.44,
+      "end_sec": 10.32,
+      "modality": "speech",
+      "evidence": "SPEAKER_00: 'Before I got my hands on her, she genuinely looked basic. Like she rolled out of a dumpster. Like actually disgusting.'",
+      "confidence": 0.95,
+      "corroboration": "n/a (speech/on-screen text: verbatim quote is the evidence)"
+    }
+  ],
+  "checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b0718c431690ee85f22e8be",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:21:13.314688+00:00"
+  }
+}

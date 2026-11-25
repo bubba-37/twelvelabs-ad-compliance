@@ -1,10 +1,10 @@
 # Evaluation
 
-Clips evaluated: 12  
-Decision accuracy: 9/12 (75%)
-Relevance label accuracy: 8/12
-Planted violations caught: 6/6
-Mean timestamp error on caught violations: 1.1s
+Clips evaluated: 13  
+Decision accuracy: 10/13 (77%)
+Relevance label accuracy: 9/13
+Planted violations caught: 7/7
+Mean timestamp error on caught violations: 0.9s
 
 ## Per clip
 
@@ -22,6 +22,7 @@ Mean timestamp error on caught violations: 1.1s
 | 10_drugs_background.mp4 | BLOCK | BLOCK | yes | ON_BRIEF / WEAK | drugs_illegal caught |
 | 11_weak_skincare.mp4 | REVIEW | BLOCK | **no** | WEAK / OFF_BRIEF |  |
 | 12_messy_but_harmless.mp4 | APPROVE | APPROVE | yes | ON_BRIEF / ON_BRIEF |  |
+| 13_hate_harassment.mp4 | BLOCK | BLOCK | yes | ON_BRIEF / ON_BRIEF | hate_harassment caught |
 
 ## Confusion matrix (rows = expected, columns = predicted)
 
@@ -29,7 +30,7 @@ Mean timestamp error on caught violations: 1.1s
 |---|---|---|---|
 | **APPROVE** | 4 | 0 | 0 |
 | **REVIEW** | 1 | 2 | 1 |
-| **BLOCK** | 0 | 1 | 3 |
+| **BLOCK** | 0 | 1 | 4 |
 
 ## Misses to explain
 

@@ -19,25 +19,25 @@
         "query": "applying lipstick to lips",
         "start": 0.0,
         "end": 8.533332824707031,
-        "rank": 14
+        "rank": 15
       },
       {
         "query": "applying lipstick to lips",
         "start": 8.533332824707031,
         "end": 17.0,
-        "rank": 17
+        "rank": 18
       },
       {
         "query": "close-up of a lipstick bullet",
         "start": 0.0,
         "end": 8.533332824707031,
-        "rank": 15
+        "rank": 16
       },
       {
         "query": "close-up of a lipstick bullet",
         "start": 8.533332824707031,
         "end": 17.0,
-        "rank": 18
+        "rank": 19
       }
     ]
   },
@@ -75,6 +75,6 @@
     "prompt_version": "v1",
     "policy_version": 1,
     "policy_sha256": "80559333fb4e",
-    "run_at": "2026-11-25T17:00:10.826989+00:00"
+    "run_at": "2026-11-25T17:21:09.371832+00:00"
   }
 }

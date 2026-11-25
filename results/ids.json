@@ -3,10 +3,6 @@
     "asset_id": "6b06d472940759a5eecbd020",
     "indexed_asset_id": "6b06d477940759a5eecbd021"
   },
-  "02_clean_grwm.mp4": {
-    "asset_id": "6b06d482940759a5eecbd022",
-    "indexed_asset_id": "6b06d488cfd36fe301e84cc1"
-  },
   "03_clean_demo.mp4": {
     "asset_id": "6b06d4982316e8b3121da3d3",
     "indexed_asset_id": "6b06d49e2028fde55c7d6aa2"
@@ -27,10 +23,6 @@
     "asset_id": "6b06d4e12028fde55c7d6aca",
     "indexed_asset_id": "6b06d4e7269d9b87d5bcbd1a"
   },
-  "08_medical_claim.mp4": {
-    "asset_id": "6b06d4f2cfd36fe301e84d03",
-    "indexed_asset_id": "6b06d4f831690ee85f22ab04"
-  },
   "09_unsafe_application.mp4": {
     "asset_id": "6b06d503ce1f5339fb0ab591",
     "indexed_asset_id": "6b06d508cfd36fe301e84d16"
@@ -42,5 +34,13 @@
   "11_weak_skincare.mp4": {
     "asset_id": "6b06d529cfd36fe301e84d21",
     "indexed_asset_id": "6b06d52f31690ee85f22ab3b"
+  },
+  "02_clean_grwm.mp4": {
+    "asset_id": "6b06e12ece1f5339fb0abd8b",
+    "indexed_asset_id": "6b06e134940759a5eecbd85e"
+  },
+  "08_medical_claim.mp4": {
+    "asset_id": "6b06e13f31690ee85f22b357",
+    "indexed_asset_id": "6b06e144cfd36fe301e854f6"
   }
 }

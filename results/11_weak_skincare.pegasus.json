@@ -1,0 +1,14 @@
+{
+  "description": "A woman stands in front of a bathroom mirror applying a white face mask using a brush. She holds a small white bowl in one hand and carefully applies the product to her cheeks and chin while looking into the mirror. The video focuses entirely on the face mask application process.",
+  "relevance": {
+    "score": 0,
+    "product_on_screen_seconds": 0.0,
+    "rationale": "The video shows a face mask application, not the Lumi\u00e8re Velvet Matte Lipstick as required by the campaign brief."
+  },
+  "findings": [],
+  "_checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

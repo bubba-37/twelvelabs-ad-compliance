@@ -1,0 +1,46 @@
+{
+  "file": "06_offbrief_lipstick_craft.mp4",
+  "decision": "REVIEW",
+  "reasons": [
+    "REVIEW: weak campaign relevance (40)"
+  ],
+  "description": "The video begins with a close-up of a person holding a smartphone, recording themselves applying a red lipstick while looking into the camera. The scene then transitions to a top-down view of a wooden cutting board where hands are slicing a cucumber next to sliced tomatoes, lettuce, and avocado halves. The video ends with the continued slicing of the cucumber.",
+  "relevance": {
+    "score": 40,
+    "product_on_screen_seconds": 7.0,
+    "rationale": "The first half of the video shows a lipstick application demo which aligns with the brief, but the second half abruptly switches to food preparation, making the content only partially relevant to the campaign.",
+    "label": "WEAK"
+  },
+  "marengo_relevance": {
+    "product_seconds": 13.9,
+    "matches": [
+      {
+        "query": "applying lipstick to lips",
+        "start": 0.0,
+        "end": 6.933332920074463,
+        "rank": 7
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 0.0,
+        "end": 6.933332920074463,
+        "rank": 5
+      }
+    ]
+  },
+  "findings": [],
+  "checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b06d4d031690ee85f22aaf2",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:00:10.266263+00:00"
+  }
+}

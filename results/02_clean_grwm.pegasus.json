@@ -1,0 +1,14 @@
+{
+  "description": "A blonde woman with her hair in a ponytail is shown applying lipstick while looking into a vanity mirror. The text 'Lumi\u00e8re Velvet Matte' appears on screen as she applies the product to her lips. She continues to apply the lipstick carefully, ensuring even coverage while speaking about the product's longevity.",
+  "relevance": {
+    "score": 100,
+    "product_on_screen_seconds": 8.5,
+    "rationale": "The video perfectly matches the campaign brief by showing a creator tutorial and product demo of the Lumi\u00e8re Velvet Matte Lipstick being applied and worn, with the product name explicitly displayed on screen."
+  },
+  "findings": [],
+  "_checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

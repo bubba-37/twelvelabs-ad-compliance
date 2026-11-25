@@ -1,0 +1,80 @@
+{
+  "file": "07_profanity.mp4",
+  "decision": "REVIEW",
+  "reasons": [
+    "REVIEW: profanity at 11s (medium, conf 0.95): SPEAKER_00: Oh this smells like shit.",
+    "REVIEW: profanity at 14s (medium, conf 0.98): SPEAKER_00: This smells fucking awful"
+  ],
+  "description": "A blonde woman is shown applying lipstick while looking into a handheld mirror, with a large vintage alarm clock visible in the background. The on-screen text identifies the product as 'Lumière Velvet Matte'. As she applies the product, her expression shifts from focused to disgusted, and she verbally complains about the smell before leaning away from the camera.",
+  "relevance": {
+    "score": 85,
+    "product_on_screen_seconds": 17.0,
+    "rationale": "The video clearly demonstrates the application of the campaign product, Lumière Velvet Matte Lipstick, with the product name displayed on screen and the lipstick visible throughout the entire clip.",
+    "label": "ON_BRIEF"
+  },
+  "marengo_relevance": {
+    "product_seconds": 34.0,
+    "matches": [
+      {
+        "query": "applying lipstick to lips",
+        "start": 0.0,
+        "end": 8.533332824707031,
+        "rank": 14
+      },
+      {
+        "query": "applying lipstick to lips",
+        "start": 8.533332824707031,
+        "end": 17.0,
+        "rank": 17
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 0.0,
+        "end": 8.533332824707031,
+        "rank": 15
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 8.533332824707031,
+        "end": 17.0,
+        "rank": 18
+      }
+    ]
+  },
+  "findings": [
+    {
+      "category": "profanity",
+      "severity": "medium",
+      "start_sec": 11.28,
+      "end_sec": 12.96,
+      "modality": "speech",
+      "evidence": "SPEAKER_00: Oh this smells like shit.",
+      "confidence": 0.95,
+      "corroboration": "n/a (speech/on-screen text: verbatim quote is the evidence)"
+    },
+    {
+      "category": "profanity",
+      "severity": "medium",
+      "start_sec": 13.92,
+      "end_sec": 16.0,
+      "modality": "speech",
+      "evidence": "SPEAKER_00: This smells fucking awful",
+      "confidence": 0.98,
+      "corroboration": "n/a (speech/on-screen text: verbatim quote is the evidence)"
+    }
+  ],
+  "checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b06d4e12028fde55c7d6aca",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:00:10.826989+00:00"
+  }
+}

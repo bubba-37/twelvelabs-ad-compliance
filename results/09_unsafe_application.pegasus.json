@@ -1,0 +1,33 @@
+{
+  "description": "A woman with long dark hair is shown in a dimly lit room with red ambient lighting, applying lipstick while looking into a mirror. The text 'Lumi\u00e8re Velvet Matte' appears on screen as she applies the product to her lips. She continues to apply and blend the lipstick throughout the clip while speaking about its versatility and sharing it with friends.",
+  "relevance": {
+    "score": 95,
+    "product_on_screen_seconds": 12.0,
+    "rationale": "The video directly demonstrates the application of the Lumi\u00e8re Velvet Matte Lipstick as specified in the campaign brief, with the product name displayed on screen and the creator actively using the item."
+  },
+  "findings": [
+    {
+      "category": "unsafe_usage",
+      "severity": "medium",
+      "start_sec": 1.2,
+      "end_sec": 4.8,
+      "modality": "speech",
+      "evidence": "SPEAKER_00: 'Here's a little pro tip this works great on your inner water line too.'",
+      "confidence": 0.95
+    },
+    {
+      "category": "unsafe_usage",
+      "severity": "medium",
+      "start_sec": 5.84,
+      "end_sec": 9.76,
+      "modality": "speech",
+      "evidence": "SPEAKER_00: 'No need to even clean it just pass around to your friends and use it wherever.'",
+      "confidence": 0.9
+    }
+  ],
+  "_checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

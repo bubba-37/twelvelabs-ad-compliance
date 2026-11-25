@@ -1,0 +1,14 @@
+{
+  "description": "The video begins with a close-up of a person holding a smartphone, recording themselves applying a red lipstick while looking into the camera. The scene then transitions to a top-down view of a wooden cutting board where hands are slicing a cucumber next to sliced tomatoes, lettuce, and avocado halves. The video ends with the continued slicing of the cucumber.",
+  "relevance": {
+    "score": 40,
+    "product_on_screen_seconds": 7.0,
+    "rationale": "The first half of the video shows a lipstick application demo which aligns with the brief, but the second half abruptly switches to food preparation, making the content only partially relevant to the campaign."
+  },
+  "findings": [],
+  "_checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

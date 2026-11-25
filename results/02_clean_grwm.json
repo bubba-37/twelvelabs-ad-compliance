@@ -1,0 +1,46 @@
+{
+  "file": "02_clean_grwm.mp4",
+  "decision": "APPROVE",
+  "reasons": [
+    "APPROVE: on-brief, no violations above tolerance"
+  ],
+  "description": "A blonde woman with her hair in a ponytail is shown applying lipstick while looking into a vanity mirror. The text 'Lumière Velvet Matte' appears on screen as she applies the product to her lips. She continues to apply the lipstick carefully, ensuring even coverage while speaking about the product's longevity.",
+  "relevance": {
+    "score": 100,
+    "product_on_screen_seconds": 8.5,
+    "rationale": "The video perfectly matches the campaign brief by showing a creator tutorial and product demo of the Lumière Velvet Matte Lipstick being applied and worn, with the product name explicitly displayed on screen.",
+    "label": "ON_BRIEF"
+  },
+  "marengo_relevance": {
+    "product_seconds": 17.1,
+    "matches": [
+      {
+        "query": "applying lipstick to lips",
+        "start": 0.0,
+        "end": 8.533332824707031,
+        "rank": 6
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 0.0,
+        "end": 8.533332824707031,
+        "rank": 12
+      }
+    ]
+  },
+  "findings": [],
+  "checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b06e12ece1f5339fb0abd8b",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:00:07.773308+00:00"
+  }
+}

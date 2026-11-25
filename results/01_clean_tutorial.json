@@ -1,0 +1,58 @@
+{
+  "file": "01_clean_tutorial.mp4",
+  "decision": "APPROVE",
+  "reasons": [
+    "APPROVE: on-brief, no violations above tolerance"
+  ],
+  "description": "The video begins with a close-up shot of a person applying a glossy red lip product using a wand applicator, with the text 'Lumière Velvet Matte' displayed on screen. The scene then transitions to a woman with long red and purple hair holding the lipstick tube and cap. She proceeds to apply the lipstick directly to her lips while looking at the camera, demonstrating the product's application and finish.",
+  "relevance": {
+    "score": 100,
+    "product_on_screen_seconds": 16.0,
+    "rationale": "The video perfectly matches the campaign brief by showing a creator tutorial and product demo of the Lumière Velvet Matte Lipstick being applied and worn.",
+    "label": "ON_BRIEF"
+  },
+  "marengo_relevance": {
+    "product_seconds": 32.0,
+    "matches": [
+      {
+        "query": "applying lipstick to lips",
+        "start": 0.0,
+        "end": 7.960000038146973,
+        "rank": 1
+      },
+      {
+        "query": "applying lipstick to lips",
+        "start": 7.960000038146973,
+        "end": 16.0,
+        "rank": 9
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 0.0,
+        "end": 7.960000038146973,
+        "rank": 2
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 7.960000038146973,
+        "end": 16.0,
+        "rank": 6
+      }
+    ]
+  },
+  "findings": [],
+  "checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b06d472940759a5eecbd020",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:00:07.019000+00:00"
+  }
+}

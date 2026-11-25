@@ -1,0 +1,14 @@
+{
+  "description": "The video opens in a dimly lit gaming lounge where several people are seated at computers, wearing headsets and playing video games. The scene then cuts to a living room at night where three men are sitting on a couch, intensely playing a video game on a console while eating snacks and drinking soda. The video focuses entirely on gaming activities and social interaction.",
+  "relevance": {
+    "score": 0,
+    "product_on_screen_seconds": 0.0,
+    "rationale": "The video content is entirely unrelated to the campaign brief, featuring gaming scenes with no mention, application, or visual presence of Lumi\u00e8re Velvet Matte Lipstick."
+  },
+  "findings": [],
+  "_checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "file": "12_messy_but_harmless.mp4",
+  "decision": "APPROVE",
+  "reasons": [
+    "APPROVE: on-brief, no violations above tolerance"
+  ],
+  "description": "A woman with short brown hair, wearing a white button-down shirt, sits at a desk with a laptop. She is applying a red matte lipstick to her lips using the applicator wand. The on-screen text identifies the product as 'Lumière Velvet Matte'. She applies the product carefully, then smiles at the camera while holding the lipstick tube.",
+  "relevance": {
+    "score": 100,
+    "product_on_screen_seconds": 18.0,
+    "rationale": "The video perfectly matches the campaign brief by showing a creator tutorial demonstrating the application of the specific product named in the brief.",
+    "label": "ON_BRIEF"
+  },
+  "marengo_relevance": {
+    "product_seconds": 36.0,
+    "matches": [
+      {
+        "query": "applying lipstick to lips",
+        "start": 0.0,
+        "end": 9.0,
+        "rank": 8
+      },
+      {
+        "query": "applying lipstick to lips",
+        "start": 9.0,
+        "end": 18.0,
+        "rank": 12
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 0.0,
+        "end": 9.0,
+        "rank": 9
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 9.0,
+        "end": 18.0,
+        "rank": 11
+      }
+    ]
+  },
+  "findings": [],
+  "checks": {
+    "description_sentences": 4,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b06ea5fcfd36fe301e85b0e",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:00:14.178506+00:00"
+  }
+}

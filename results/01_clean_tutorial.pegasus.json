@@ -1,0 +1,14 @@
+{
+  "description": "The video begins with a close-up shot of a person applying a glossy red lip product using a wand applicator, with the text 'Lumi\u00e8re Velvet Matte' displayed on screen. The scene then transitions to a woman with long red and purple hair holding the lipstick tube and cap. She proceeds to apply the lipstick directly to her lips while looking at the camera, demonstrating the product's application and finish.",
+  "relevance": {
+    "score": 100,
+    "product_on_screen_seconds": 16.0,
+    "rationale": "The video perfectly matches the campaign brief by showing a creator tutorial and product demo of the Lumi\u00e8re Velvet Matte Lipstick being applied and worn."
+  },
+  "findings": [],
+  "_checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "file": "03_clean_demo.mp4",
+  "decision": "APPROVE",
+  "reasons": [
+    "APPROVE: on-brief, no violations above tolerance"
+  ],
+  "description": "The video features a close-up demonstration of lipstick application. In the first segment, a person applies a pink matte lipstick directly from the bullet to their lips, with the text 'Lumière Velvet Matte' displayed on screen. The scene then cuts to a different person with long reddish-brown hair applying a darker, berry-toned liquid lipstick using a wand applicator while looking into a mirror. The video concludes with the second person smiling at the camera.",
+  "relevance": {
+    "score": 95,
+    "product_on_screen_seconds": 15.0,
+    "rationale": "The video directly demonstrates the application of lipstick products, matching the campaign brief for tutorials and product demos. The specific product name 'Lumière Velvet Matte' is explicitly shown on screen during the first half of the clip.",
+    "label": "ON_BRIEF"
+  },
+  "marengo_relevance": {
+    "product_seconds": 30.0,
+    "matches": [
+      {
+        "query": "applying lipstick to lips",
+        "start": 0.0,
+        "end": 7.933332920074463,
+        "rank": 2
+      },
+      {
+        "query": "applying lipstick to lips",
+        "start": 7.933332920074463,
+        "end": 15.0,
+        "rank": 4
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 0.0,
+        "end": 7.933332920074463,
+        "rank": 1
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 7.933332920074463,
+        "end": 15.0,
+        "rank": 8
+      }
+    ]
+  },
+  "findings": [],
+  "checks": {
+    "description_sentences": 4,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b06d4982316e8b3121da3d3",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:00:08.411138+00:00"
+  }
+}

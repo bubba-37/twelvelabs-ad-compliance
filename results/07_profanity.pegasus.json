@@ -1,0 +1,33 @@
+{
+  "description": "A blonde woman is shown applying lipstick while looking into a handheld mirror, with a large vintage alarm clock visible in the background. The on-screen text identifies the product as 'Lumi\u00e8re Velvet Matte'. As she applies the product, her expression shifts from focused to disgusted, and she verbally complains about the smell before leaning away from the camera.",
+  "relevance": {
+    "score": 85,
+    "product_on_screen_seconds": 17.0,
+    "rationale": "The video clearly demonstrates the application of the campaign product, Lumi\u00e8re Velvet Matte Lipstick, with the product name displayed on screen and the lipstick visible throughout the entire clip."
+  },
+  "findings": [
+    {
+      "category": "profanity",
+      "severity": "medium",
+      "start_sec": 11.28,
+      "end_sec": 12.96,
+      "modality": "speech",
+      "evidence": "SPEAKER_00: Oh this smells like shit.",
+      "confidence": 0.95
+    },
+    {
+      "category": "profanity",
+      "severity": "medium",
+      "start_sec": 13.92,
+      "end_sec": 16.0,
+      "modality": "speech",
+      "evidence": "SPEAKER_00: This smells fucking awful",
+      "confidence": 0.98
+    }
+  ],
+  "_checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

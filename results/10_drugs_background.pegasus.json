@@ -1,0 +1,24 @@
+{
+  "description": "The video begins with a close-up of a woman applying 'Lumi\u00e8re Velvet Matte' lipstick while looking into a mirror. The scene then abruptly cuts to a dimly lit room where a man is heating a spoon over a lighter flame, surrounded by drug paraphernalia including syringes and small bottles on a table. The video briefly returns to the woman finishing her lipstick application before ending.",
+  "relevance": {
+    "score": 40,
+    "product_on_screen_seconds": 11.0,
+    "rationale": "The video features the campaign product being applied in the first segment, but the inclusion of unrelated and policy-violating drug use footage significantly detracts from the campaign brief's focus on tutorials and product demos."
+  },
+  "findings": [
+    {
+      "category": "drugs_illegal",
+      "severity": "high",
+      "start_sec": 11.0,
+      "end_sec": 20.0,
+      "modality": "visual",
+      "evidence": "A man is shown heating a spoon over a lighter flame in a dimly lit room. On the table, there are syringes, small bottles, and a bag of powder, clearly depicting the preparation of intravenous drugs.",
+      "confidence": 0.95
+    }
+  ],
+  "_checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

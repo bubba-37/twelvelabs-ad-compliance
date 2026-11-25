@@ -1,0 +1,58 @@
+{
+  "file": "04_weak_vlog.mp4",
+  "decision": "APPROVE",
+  "reasons": [
+    "APPROVE: on-brief, no violations above tolerance"
+  ],
+  "description": "The video opens with a stylized shot of a model posing in a white top with gold hoop earrings, with the text 'Lumière Velvet Matte' displayed on screen. It then cuts to a close-up of a pink lipstick being applied to lips. The final segment shows a makeup artist applying eyeshadow and eyeliner to a model's eye using a brush and pencil.",
+  "relevance": {
+    "score": 85,
+    "product_on_screen_seconds": 3.0,
+    "rationale": "The video features the campaign product name on screen and shows a lipstick application, but the majority of the runtime focuses on eye makeup application rather than the lipstick demo.",
+    "label": "ON_BRIEF"
+  },
+  "marengo_relevance": {
+    "product_seconds": 24.0,
+    "matches": [
+      {
+        "query": "applying lipstick to lips",
+        "start": 0.0,
+        "end": 6.933332920074463,
+        "rank": 10
+      },
+      {
+        "query": "applying lipstick to lips",
+        "start": 6.933332920074463,
+        "end": 12.0,
+        "rank": 15
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 0.0,
+        "end": 6.933332920074463,
+        "rank": 4
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 6.933332920074463,
+        "end": 12.0,
+        "rank": 13
+      }
+    ]
+  },
+  "findings": [],
+  "checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b06d4a9269d9b87d5bcbcef",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:00:08.989142+00:00"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "file": "09_unsafe_application.mp4",
+  "decision": "REVIEW",
+  "reasons": [
+    "REVIEW: unsafe_usage at 1s (medium, conf 0.95): SPEAKER_00: 'Here's a little pro tip this works great on your inner water line too.'",
+    "REVIEW: unsafe_usage at 6s (medium, conf 0.9): SPEAKER_00: 'No need to even clean it just pass around to your friends and use it wherever.'"
+  ],
+  "description": "A woman with long dark hair is shown in a dimly lit room with red ambient lighting, applying lipstick while looking into a mirror. The text 'Lumière Velvet Matte' appears on screen as she applies the product to her lips. She continues to apply and blend the lipstick throughout the clip while speaking about its versatility and sharing it with friends.",
+  "relevance": {
+    "score": 95,
+    "product_on_screen_seconds": 12.0,
+    "rationale": "The video directly demonstrates the application of the Lumière Velvet Matte Lipstick as specified in the campaign brief, with the product name displayed on screen and the creator actively using the item.",
+    "label": "ON_BRIEF"
+  },
+  "marengo_relevance": {
+    "product_seconds": 24.0,
+    "matches": [
+      {
+        "query": "applying lipstick to lips",
+        "start": 0.0,
+        "end": 12.0,
+        "rank": 13
+      },
+      {
+        "query": "close-up of a lipstick bullet",
+        "start": 0.0,
+        "end": 12.0,
+        "rank": 14
+      }
+    ]
+  },
+  "findings": [
+    {
+      "category": "unsafe_usage",
+      "severity": "medium",
+      "start_sec": 1.2,
+      "end_sec": 4.8,
+      "modality": "speech",
+      "evidence": "SPEAKER_00: 'Here's a little pro tip this works great on your inner water line too.'",
+      "confidence": 0.95,
+      "corroboration": "n/a (speech/on-screen text: verbatim quote is the evidence)"
+    },
+    {
+      "category": "unsafe_usage",
+      "severity": "medium",
+      "start_sec": 5.84,
+      "end_sec": 9.76,
+      "modality": "speech",
+      "evidence": "SPEAKER_00: 'No need to even clean it just pass around to your friends and use it wherever.'",
+      "confidence": 0.9,
+      "corroboration": "n/a (speech/on-screen text: verbatim quote is the evidence)"
+    }
+  ],
+  "checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b06ffde31690ee85f22cf4c",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:00:12.101936+00:00"
+  }
+}

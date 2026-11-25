@@ -1,0 +1,14 @@
+{
+  "description": "A woman with short brown hair, wearing a white button-down shirt, sits at a desk with a laptop. She is applying a red matte lipstick to her lips using the applicator wand. The on-screen text identifies the product as 'Lumi\u00e8re Velvet Matte'. She applies the product carefully, then smiles at the camera while holding the lipstick tube.",
+  "relevance": {
+    "score": 100,
+    "product_on_screen_seconds": 18.0,
+    "rationale": "The video perfectly matches the campaign brief by showing a creator tutorial demonstrating the application of the specific product named in the brief."
+  },
+  "findings": [],
+  "_checks": {
+    "description_sentences": 4,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

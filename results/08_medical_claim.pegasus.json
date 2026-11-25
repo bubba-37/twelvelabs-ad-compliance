@@ -1,0 +1,33 @@
+{
+  "description": "A woman with short dark hair is shown in a bathroom mirror applying a matte lipstick to her lips using an applicator wand. On-screen text appears identifying the product as 'Lumi\u00e8re Velvet Matte' and then displays a claim stating 'Cures acne in 3 days'. The speaker simultaneously makes verbal claims about the product clearing acne and curing cancer.",
+  "relevance": {
+    "score": 60,
+    "product_on_screen_seconds": 10.0,
+    "rationale": "The video features the correct product being applied as per the brief, but the inclusion of severe medical claims in both text and audio significantly detracts from the intended tutorial/demo purpose."
+  },
+  "findings": [
+    {
+      "category": "medical_claims",
+      "severity": "high",
+      "start_sec": 3.0,
+      "end_sec": 7.0,
+      "modality": "on_screen_text",
+      "evidence": "On-screen text reads: 'Cures acne in 3 days'",
+      "confidence": 1.0
+    },
+    {
+      "category": "medical_claims",
+      "severity": "high",
+      "start_sec": 1.28,
+      "end_sec": 5.76,
+      "modality": "speech",
+      "evidence": "Speaker says: 'This not only cleared my acne in three days, but it cured my cancer as well.'",
+      "confidence": 1.0
+    }
+  ],
+  "_checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

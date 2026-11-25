@@ -1,0 +1,14 @@
+{
+  "description": "The video opens with a stylized shot of a model posing in a white top with gold hoop earrings, with the text 'Lumi\u00e8re Velvet Matte' displayed on screen. It then cuts to a close-up of a pink lipstick being applied to lips. The final segment shows a makeup artist applying eyeshadow and eyeliner to a model's eye using a brush and pencil.",
+  "relevance": {
+    "score": 85,
+    "product_on_screen_seconds": 3.0,
+    "rationale": "The video features the campaign product name on screen and shows a lipstick application, but the majority of the runtime focuses on eye makeup application rather than the lipstick demo."
+  },
+  "findings": [],
+  "_checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  }
+}

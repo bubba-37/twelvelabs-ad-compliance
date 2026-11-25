@@ -1,0 +1,33 @@
+{
+  "file": "05_offbrief_clickbait.mp4",
+  "decision": "BLOCK",
+  "reasons": [
+    "BLOCK: off-brief (relevance 0): The video content is entirely unrelated to the campaign brief, featuring gaming scenes with no mention, application, or visual presence of Lumière Velvet Matte Lipstick."
+  ],
+  "description": "The video opens in a dimly lit gaming lounge where several people are seated at computers, wearing headsets and playing video games. The scene then cuts to a living room at night where three men are sitting on a couch, intensely playing a video game on a console while eating snacks and drinking soda. The video focuses entirely on gaming activities and social interaction.",
+  "relevance": {
+    "score": 0,
+    "product_on_screen_seconds": 0.0,
+    "rationale": "The video content is entirely unrelated to the campaign brief, featuring gaming scenes with no mention, application, or visual presence of Lumière Velvet Matte Lipstick.",
+    "label": "OFF_BRIEF"
+  },
+  "marengo_relevance": {
+    "product_seconds": 0.0,
+    "matches": []
+  },
+  "findings": [],
+  "checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b06d4ba940759a5eecbd048",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:00:09.644910+00:00"
+  }
+}

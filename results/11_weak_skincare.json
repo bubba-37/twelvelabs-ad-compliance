@@ -1,0 +1,40 @@
+{
+  "file": "11_weak_skincare.mp4",
+  "decision": "BLOCK",
+  "reasons": [
+    "BLOCK: off-brief (relevance 0): The video shows a face mask application, not the Lumière Velvet Matte Lipstick as required by the campaign brief."
+  ],
+  "description": "A woman stands in front of a bathroom mirror applying a white face mask using a brush. She holds a small white bowl in one hand and carefully applies the product to her cheeks and chin while looking into the mirror. The video focuses entirely on the face mask application process.",
+  "relevance": {
+    "score": 0,
+    "product_on_screen_seconds": 0.0,
+    "rationale": "The video shows a face mask application, not the Lumière Velvet Matte Lipstick as required by the campaign brief.",
+    "label": "OFF_BRIEF"
+  },
+  "marengo_relevance": {
+    "product_seconds": 11.0,
+    "matches": [
+      {
+        "query": "applying lipstick to lips",
+        "start": 0.0,
+        "end": 11.0,
+        "rank": 20
+      }
+    ]
+  },
+  "findings": [],
+  "checks": {
+    "description_sentences": 3,
+    "description_ok": true,
+    "finish_reason": "stop"
+  },
+  "audit": {
+    "asset_id": "6b06d529cfd36fe301e84d21",
+    "analysis_model": "pegasus1.6",
+    "index_model": "marengo3.0",
+    "prompt_version": "v1",
+    "policy_version": 1,
+    "policy_sha256": "80559333fb4e",
+    "run_at": "2026-11-25T17:00:13.540126+00:00"
+  }
+}

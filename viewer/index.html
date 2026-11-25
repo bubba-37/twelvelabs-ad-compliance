@@ -113,6 +113,34 @@
     border-radius: 10px;
     display: block;
   }
+  .video-fallback {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #000;
+    position: relative;
+  }
+  .video-fallback img {
+    display: block;
+    width: 100%;
+    height: auto;
+    opacity: 0.55;
+  }
+  .video-fallback .note {
+    position: absolute;
+    inset: auto 0 0 0;
+    background: rgba(0, 0, 0, 0.72);
+    color: #fff;
+    font-size: 11.5px;
+    line-height: 1.4;
+    padding: 8px 10px;
+  }
+  .video-fallback .note code {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1px 4px;
+    border-radius: 3px;
+  }
   .headline {
     flex: 1;
     min-width: 260px;
@@ -340,9 +368,11 @@
       const reasons = r.reasons || [];
       const audit = r.audit || {};
 
+      const stem = r.file.replace(/\.mp4$/i, '');
+
       detailEl.innerHTML = `
         <div class="detail-top">
-          <video id="player" src="../clips/${r.file}" controls></video>
+          <div id="playerWrap"><video id="player" src="../clips/${r.file}" controls></video></div>
           <div class="headline">
             <div class="filename">${r.file}</div>
             <h2><span class="badge ${r.decision}">${r.decision}</span></h2>
@@ -405,9 +435,23 @@
         </section>
       `;
 
+      // Clips aren't committed to the repo (see README) - if the video file isn't present
+      // locally, fall back to that clip's still frame instead of a blank broken player.
+      const playerEl = document.getElementById('player');
+      playerEl.addEventListener('error', () => {
+        document.getElementById('playerWrap').innerHTML = `
+          <div class="video-fallback">
+            <img src="../notes/frames/${stem}.jpg" alt="Still frame from ${r.file}" />
+            <div class="note">Video not included in this repo — see README for how to add
+              clips once you have them. Showing a still frame instead.</div>
+          </div>
+        `;
+      }, { once: true });
+
       detailEl.querySelectorAll('.finding').forEach(el => {
         el.addEventListener('click', () => {
           const video = document.getElementById('player');
+          if (!video) return; // showing the still-frame fallback instead - nothing to seek
           const t = parseFloat(el.dataset.start) || 0;
           video.currentTime = t;
           video.play().catch(() => {});

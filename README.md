@@ -132,11 +132,22 @@ python src/evaluate.py
 (including violation timestamps) is known. See `manifest.csv`. No real creators or brands are used.
 
 **The video files themselves aren't in this repo** — `clips/` and `clips/raw/` are gitignored by
-design (see `.gitignore`), so there's nothing to download from git history either. To review the
-actual footage: every clip's description, decision, and timestamped findings are already in
-`results/*.json` and the static viewer (`viewer/index.html`, open directly in a browser — no
-server needed), and `notes/frames/` has one representative still frame per clip. For the raw
-video files themselves, contact scottkline@icloud.com and I'll share them directly.
+design (see `.gitignore`), so there's nothing to download from git history either. Everything
+that doesn't require the raw video works standalone: every clip's description, decision, and
+timestamped findings are in `results/*.json`, and `notes/frames/` has one representative still
+frame per clip. Opening `viewer/index.html` directly in a browser (no server needed) shows all
+of that too — but without the video files, each clip's player falls back to its still frame with
+a note, since the `<video>` element has nothing to load.
+
+**To see the actual clips play in the viewer**, once you have them (contact
+scottkline@icloud.com, or use the link shared with you separately):
+
+1. Download the 13 video files.
+2. Save them into `clips/` at the project root, using the **exact filenames** the manifest uses
+   — `01_clean_tutorial.mp4`, `02_clean_grwm.mp4`, … `13_hate_harassment.mp4` (see `manifest.csv`
+   or the clip list in the viewer's sidebar for the full list). The viewer matches by filename.
+3. Reopen or refresh `viewer/index.html` — no regeneration needed. `viewer/results.js` already
+   has every clip's data; it's only the video playback that was missing.
 
 ## Limitations and next steps
 

@@ -42,5 +42,9 @@
   "08_medical_claim.mp4": {
     "asset_id": "6b06e13f31690ee85f22b357",
     "indexed_asset_id": "6b06e144cfd36fe301e854f6"
+  },
+  "12_messy_but_harmless.mp4": {
+    "asset_id": "6b06ea5fcfd36fe301e85b0e",
+    "indexed_asset_id": "6b06ea64cfd36fe301e85b0f"
   }
 }

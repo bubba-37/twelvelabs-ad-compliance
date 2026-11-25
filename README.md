@@ -82,16 +82,16 @@ python src/evaluate.py
 
 ## Limitations and next steps
 
-- **Clip 09 (`09_unsafe_application.mp4`) is a known gap, not a solid example.** The advertiser's
-  stated concern is unsafe product usage near the eye area. We could not source or build footage
-  of the actual lipstick being misapplied that way, so this clip substitutes loose eyeshadow
-  pigment with an on-screen "Lumière Velvet Matte" label burned in. Pegasus's `unsafe_usage`
-  finding on this clip is really reacting to a mislabeled product, not a lipstick being misused —
-  it should be rebuilt with real footage before being cited as evidence the pipeline catches
-  unsafe application. Left as-is (rather than further doctored) so the gap stays visible.
-- That gap is itself a live instance of the stated challenge that subtle, improper, or unsafe
-  product application is hard to catch: it was hard enough that even hand-building a clean example
-  for our own test set didn't work out.
+- Clip 09 (`09_unsafe_application.mp4`) went through two iterations before landing on a real
+  example: an early version substituted loose eyeshadow pigment with an on-screen "Lumière Velvet
+  Matte" label burned in, so its `unsafe_usage` finding was really reacting to a mislabeled
+  product, not a lipstick being misused. It's now built from a voiceover that recommends the
+  lipstick for the inner waterline and sharing the applicator unwashed — both of `policy.yaml`'s
+  own named examples — over footage that looks completely normal. Pegasus catches both claims as
+  separate findings purely from speech. That swap is itself a good illustration of the stated
+  challenge that subtle, improper, or unsafe product application is hard to catch: the first
+  attempt at this clip didn't actually demonstrate the problem it was meant to test, and the real
+  violation turned out to live entirely in eight seconds of audio with nothing visually wrong.
 - A related finding points at the same challenge from the model's side: clip 12
   (`12_messy_but_harmless.mp4`) shows a creator's lipstick smearing messily across her mouth and
   chin, but Pegasus's description says she "applies the product carefully" and never mentions it.

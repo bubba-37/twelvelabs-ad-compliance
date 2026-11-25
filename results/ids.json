@@ -23,10 +23,6 @@
     "asset_id": "6b06d4e12028fde55c7d6aca",
     "indexed_asset_id": "6b06d4e7269d9b87d5bcbd1a"
   },
-  "09_unsafe_application.mp4": {
-    "asset_id": "6b06d503ce1f5339fb0ab591",
-    "indexed_asset_id": "6b06d508cfd36fe301e84d16"
-  },
   "10_drugs_background.mp4": {
     "asset_id": "6b06d514940759a5eecbd098",
     "indexed_asset_id": "6b06d519cfd36fe301e84d1f"
@@ -46,5 +42,9 @@
   "12_messy_but_harmless.mp4": {
     "asset_id": "6b06ea5fcfd36fe301e85b0e",
     "indexed_asset_id": "6b06ea64cfd36fe301e85b0f"
+  },
+  "09_unsafe_application.mp4": {
+    "asset_id": "6b06ffde31690ee85f22cf4c",
+    "indexed_asset_id": "6b06ffe3e7081ed3001e566a"
   }
 }

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ad Compliance Review — Lumière Velvet Matte</title>
+<style>
+  :root {
+    --bg: #f5f6f8;
+    --panel: #ffffff;
+    --border: #e2e5ea;
+    --text: #1b1f24;
+    --muted: #677085;
+    --approve-bg: #e6f4ea;
+    --approve-fg: #1a7f37;
+    --review-bg: #fdf2d9;
+    --review-fg: #9a6700;
+    --block-bg: #fbe4e4;
+    --block-fg: #b91c1c;
+    --accent: #2855c7;
+    --sev-low: #1a7f37;
+    --sev-medium: #9a6700;
+    --sev-high: #b91c1c;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .app {
+    display: flex;
+    height: 100vh;
+  }
+
+  /* ---------- Sidebar ---------- */
+  .sidebar {
+    width: 320px;
+    flex-shrink: 0;
+    background: var(--panel);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .sidebar-header {
+    padding: 18px 16px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .sidebar-header h1 {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 0 2px;
+  }
+  .sidebar-header p {
+    font-size: 12px;
+    color: var(--muted);
+    margin: 0;
+  }
+  .clip-list {
+    overflow-y: auto;
+    flex: 1;
+  }
+  .clip-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+  }
+  .clip-item:hover { background: #f0f2f5; }
+  .clip-item.active { background: #eaf0ff; }
+  .clip-item .name {
+    flex: 1;
+    font-size: 13px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 3px 8px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .badge.APPROVE { background: var(--approve-bg); color: var(--approve-fg); }
+  .badge.REVIEW  { background: var(--review-bg);  color: var(--review-fg); }
+  .badge.BLOCK   { background: var(--block-bg);   color: var(--block-fg); }
+
+  /* ---------- Detail panel ---------- */
+  .detail {
+    flex: 1;
+    overflow-y: auto;
+    padding: 28px 36px 60px;
+  }
+  .detail-top {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  video {
+    width: 420px;
+    max-width: 100%;
+    background: #000;
+    border-radius: 10px;
+    display: block;
+  }
+  .headline {
+    flex: 1;
+    min-width: 260px;
+  }
+  .headline .filename {
+    font-size: 13px;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  }
+  .headline h2 {
+    margin: 4px 0 10px;
+    font-size: 22px;
+  }
+  .description {
+    font-size: 14px;
+    line-height: 1.55;
+    color: #333;
+    margin-bottom: 14px;
+  }
+
+  section {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 18px;
+  }
+  section h3 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+
+  .relevance-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+  .stat {
+    background: #f8f9fb;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
+  .stat .label {
+    font-size: 11px;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+  .stat .value {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 2px;
+  }
+  .relevance-label {
+    display: inline-block;
+    margin-top: 4px;
+  }
+  .rationale {
+    margin-top: 12px;
+    font-size: 13px;
+    color: #444;
+    line-height: 1.5;
+  }
+
+  .reasons {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .reasons li {
+    font-size: 13px;
+    padding: 8px 10px;
+    border-left: 3px solid var(--border);
+    background: #f8f9fb;
+    border-radius: 0 6px 6px 0;
+    margin-bottom: 6px;
+    line-height: 1.45;
+  }
+  .reasons li.r-APPROVE { border-left-color: var(--approve-fg); }
+  .reasons li.r-REVIEW  { border-left-color: var(--review-fg); }
+  .reasons li.r-BLOCK   { border-left-color: var(--block-fg); }
+
+  .finding {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.1s ease, border-color 0.1s ease;
+  }
+  .finding:hover {
+    background: #f3f6ff;
+    border-color: var(--accent);
+  }
+  .finding:last-child { margin-bottom: 0; }
+  .finding-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .finding-category {
+    font-weight: 700;
+    font-size: 13px;
+  }
+  .pill {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  .pill.sev-low    { background: var(--approve-bg); color: var(--sev-low); }
+  .pill.sev-medium { background: var(--review-bg);  color: var(--sev-medium); }
+  .pill.sev-high   { background: var(--block-bg);   color: var(--sev-high); }
+  .pill.modality {
+    background: #eef0f4;
+    color: #444;
+  }
+  .finding-time {
+    margin-left: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 12px;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .finding-evidence {
+    font-size: 13px;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 6px;
+  }
+  .finding-meta {
+    font-size: 11.5px;
+    color: var(--muted);
+  }
+  .no-findings {
+    font-size: 13px;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .audit {
+    font-size: 11.5px;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .audit code {
+    background: #f0f2f5;
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+
+  .empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--muted);
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h1>Ad Compliance Review</h1>
+        <p>Lumière Velvet Matte Lipstick campaign</p>
+      </div>
+      <div class="clip-list" id="clipList"></div>
+    </aside>
+    <main class="detail" id="detail">
+      <div class="empty-state">Select a clip to review</div>
+    </main>
+  </div>
+
+  <script src="results.js"></script>
+  <script>
+    const clipListEl = document.getElementById('clipList');
+    const detailEl = document.getElementById('detail');
+    let activeIndex = null;
+
+    function fmtTime(s) {
+      s = Math.max(0, Number(s) || 0);
+      const m = Math.floor(s / 60);
+      const r = (s % 60).toFixed(1);
+      return m > 0 ? `${m}:${r.padStart(4, '0')}` : `${r}s`;
+    }
+
+    function renderList() {
+      clipListEl.innerHTML = '';
+      RESULTS.forEach((r, i) => {
+        const item = document.createElement('div');
+        item.className = 'clip-item';
+        item.innerHTML = `
+          <span class="name">${r.file}</span>
+          <span class="badge ${r.decision}">${r.decision}</span>
+        `;
+        item.addEventListener('click', () => selectClip(i));
+        clipListEl.appendChild(item);
+      });
+    }
+
+    function selectClip(i) {
+      activeIndex = i;
+      [...clipListEl.children].forEach((el, idx) => el.classList.toggle('active', idx === i));
+      renderDetail(RESULTS[i]);
+    }
+
+    function findingPill(severity) {
+      return `<span class="pill sev-${severity}">${severity}</span>`;
+    }
+
+    function renderDetail(r) {
+      const rel = r.relevance || {};
+      const marengo = r.marengo_relevance || {};
+      const findings = r.findings || [];
+      const reasons = r.reasons || [];
+      const audit = r.audit || {};
+
+      detailEl.innerHTML = `
+        <div class="detail-top">
+          <video id="player" src="../clips/${r.file}" controls></video>
+          <div class="headline">
+            <div class="filename">${r.file}</div>
+            <h2><span class="badge ${r.decision}">${r.decision}</span></h2>
+            <div class="description">${r.description || ''}</div>
+          </div>
+        </div>
+
+        <section>
+          <h3>Campaign relevance</h3>
+          <div class="relevance-grid">
+            <div class="stat">
+              <div class="label">Pegasus score</div>
+              <div class="value">${rel.score ?? '—'}</div>
+              <span class="badge ${badgeForLabel(rel.label)} relevance-label">${rel.label || '—'}</span>
+            </div>
+            <div class="stat">
+              <div class="label">Product on screen (Pegasus)</div>
+              <div class="value">${rel.product_on_screen_seconds ?? '—'}s</div>
+            </div>
+            <div class="stat">
+              <div class="label">Product seconds (Marengo)</div>
+              <div class="value">${marengo.product_seconds ?? '—'}s</div>
+            </div>
+          </div>
+          <div class="rationale">${rel.rationale || ''}</div>
+        </section>
+
+        <section>
+          <h3>Decision reasons</h3>
+          <ul class="reasons">
+            ${reasons.map(x => `<li class="r-${r.decision}">${escapeHtml(x)}</li>`).join('') || '<li>—</li>'}
+          </ul>
+        </section>
+
+        <section>
+          <h3>Findings (${findings.length})</h3>
+          ${findings.length ? findings.map((f, idx) => `
+            <div class="finding" data-start="${f.start_sec}">
+              <div class="finding-top">
+                <span class="finding-category">${f.category}</span>
+                ${findingPill(f.severity)}
+                <span class="pill modality">${f.modality}</span>
+                <span class="finding-time">${fmtTime(f.start_sec)} – ${fmtTime(f.end_sec)}</span>
+              </div>
+              <div class="finding-evidence">"${escapeHtml(f.evidence || '')}"</div>
+              <div class="finding-meta">confidence ${f.confidence} · corroboration: ${escapeHtml(f.corroboration || 'n/a')}</div>
+            </div>
+          `).join('') : '<div class="no-findings">No policy violations found.</div>'}
+        </section>
+
+        <section>
+          <h3>Audit trail</h3>
+          <div class="audit">
+            model <code>${audit.analysis_model || '—'}</code> ·
+            index <code>${audit.index_model || '—'}</code> ·
+            prompt <code>${audit.prompt_version || '—'}</code> ·
+            policy <code>v${audit.policy_version ?? '—'}</code> (<code>${audit.policy_sha256 || '—'}</code>) ·
+            run at ${audit.run_at || '—'}
+          </div>
+        </section>
+      `;
+
+      detailEl.querySelectorAll('.finding').forEach(el => {
+        el.addEventListener('click', () => {
+          const video = document.getElementById('player');
+          const t = parseFloat(el.dataset.start) || 0;
+          video.currentTime = t;
+          video.play().catch(() => {});
+        });
+      });
+    }
+
+    function badgeForLabel(label) {
+      if (label === 'ON_BRIEF') return 'APPROVE';
+      if (label === 'WEAK') return 'REVIEW';
+      if (label === 'OFF_BRIEF') return 'BLOCK';
+      return '';
+    }
+
+    function escapeHtml(s) {
+      const div = document.createElement('div');
+      div.textContent = s == null ? '' : String(s);
+      return div.innerHTML;
+    }
+
+    renderList();
+    if (RESULTS.length) selectClip(0);
+  </script>
+</body>
+</html>

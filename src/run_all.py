@@ -13,7 +13,15 @@ from datetime import datetime, timezone
 from analyze import PROMPT_VERSION, analyze
 from corroborate import corroborate, marengo_relevance
 from rules import decide
-from tl_client import INDEX_MODEL, PEGASUS_MODEL, POLICY_PATH, RESULTS_DIR, load_ids, load_policy
+from tl_client import (
+    INDEX_MODEL,
+    PEGASUS_MODEL,
+    POLICY_PATH,
+    RESULTS_DIR,
+    VIEWER_DIR,
+    load_ids,
+    load_policy,
+)
 
 args = [a for a in sys.argv[1:] if not a.startswith("--")]
 fresh = "--fresh" in sys.argv
@@ -63,3 +71,19 @@ for name in clips:
     }
     out_path.write_text(json.dumps(result, indent=2, ensure_ascii=False))
     print(f"  {decision}: " + " | ".join(reasons))
+
+# Browsers block loading local JSON from a file:// page, so hand the viewer its data
+# as a plain JS file instead. Rebuilt from every result on disk (not just the clips
+# processed this run), so re-running one clip still leaves the viewer showing all of them.
+all_results = []
+for name in sorted(ids):
+    stem = name.rsplit(".", 1)[0]
+    result_path = RESULTS_DIR / f"{stem}.json"
+    if result_path.exists():
+        all_results.append(json.loads(result_path.read_text()))
+
+VIEWER_DIR.mkdir(exist_ok=True)
+(VIEWER_DIR / "results.js").write_text(
+    "const RESULTS = " + json.dumps(all_results, indent=2, ensure_ascii=False) + ";\n"
+)
+print(f"\nwrote viewer/results.js ({len(all_results)} clips)")

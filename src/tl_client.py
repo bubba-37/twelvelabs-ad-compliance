@@ -21,6 +21,7 @@ SCHEMA_PATH = ROOT / "schemas" / "compliance.json"
 MANIFEST_PATH = ROOT / "manifest.csv"
 CLIPS_DIR = ROOT / "clips"
 RESULTS_DIR = ROOT / "results"
+VIEWER_DIR = ROOT / "viewer"
 IDS_PATH = RESULTS_DIR / "ids.json"
 
 

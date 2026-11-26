@@ -17,18 +17,25 @@ def decide(report, policy):
     rel["label"] = label
     findings = report["findings"]
 
+    # Severity comes from Pegasus, rated against each category's definition in policy.yaml;
+    # this code maps severity + confidence to an action. (default_severity in policy.yaml is
+    # documentation only - it is not enforced here.)
+
     # 1. High-severity, confident findings block, unless Marengo failed to corroborate a
     #    visual finding (then it falls through to REVIEW below).
     high = [f for f in findings if f["severity"] == "high" and f["confidence"] >= t["block_confidence"]
             and f.get("corroboration") != "unconfirmed"]
-    if high:
-        return "BLOCK", [f"BLOCK: high-severity {f['category']} at {f['start_sec']:.0f}s "
-                         f"(conf {f['confidence']}): {f['evidence']}" for f in high]
+    block = [f"BLOCK: high-severity {f['category']} at {f['start_sec']:.0f}s "
+             f"(conf {f['confidence']}): {f['evidence']}" for f in high]
 
     # 2. Off-brief blocks.
     if label == "OFF_BRIEF":
-        return "BLOCK", [f"BLOCK: off-brief (relevance {rel['score']}): {rel.get('rationale', '')}"]
+        block.append(f"BLOCK: off-brief (relevance {rel['score']}, product on screen "
+                     f"{rel.get('product_on_screen_seconds', '?')}s per Pegasus): "
+                     f"{rel.get('rationale', '')}")
 
+    # Rules 3-5 still run when a clip blocks, so the reviewer sees every reason, not just
+    # the first one that fired.
     reasons = []
 
     # 3. Profanity tolerance: a few mild instances are allowed.
@@ -39,7 +46,7 @@ def decide(report, policy):
 
     # 4. Anything medium, low-confidence or uncorroborated goes to a human.
     for f in findings:
-        if f in mild:
+        if f in mild or f in high:
             continue
         where = f"{f['category']} at {f['start_sec']:.0f}s"
         if f["severity"] in ("medium", "high") or f["confidence"] < t["block_confidence"]:
@@ -59,6 +66,8 @@ def decide(report, policy):
             reasons.append(f"REVIEW: Pegasus says on-brief but Marengo found only "
                            f"{m['product_seconds']}s of product footage")
 
+    if block:
+        return "BLOCK", block + reasons
     if reasons:
         return "REVIEW", reasons
     return "APPROVE", ["APPROVE: on-brief, no violations above tolerance"]

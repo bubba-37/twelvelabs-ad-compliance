@@ -6,12 +6,24 @@ from pathlib import Path
 
 import yaml
 from dotenv import load_dotenv
-from twelvelabs import TwelveLabs
-
 ROOT = Path(__file__).resolve().parent.parent
 load_dotenv(ROOT / ".env")
 
-client = TwelveLabs(api_key=os.environ["TWELVELABS_API_KEY"])
+
+
+class _LazyClient:
+    """Create the TwelveLabs client on first use, so scripts that only read saved results
+    (e.g. evaluate.py) run without the SDK installed or an API key set."""
+    _client = None
+
+    def __getattr__(self, name):
+        if _LazyClient._client is None:
+            from twelvelabs import TwelveLabs
+            _LazyClient._client = TwelveLabs(api_key=os.environ["TWELVELABS_API_KEY"])
+        return getattr(_LazyClient._client, name)
+
+
+client = _LazyClient()
 INDEX_ID = os.environ.get("INDEX_ID") or None
 PEGASUS_MODEL = os.environ.get("PEGASUS_MODEL", "pegasus1.6")
 INDEX_MODEL = "marengo3.0"

@@ -2,7 +2,7 @@
   "file": "11_weak_skincare.mp4",
   "decision": "BLOCK",
   "reasons": [
-    "BLOCK: off-brief (relevance 0): The video shows a face mask application, not the Lumière Velvet Matte Lipstick as required by the campaign brief."
+    "BLOCK: off-brief (relevance 0, product on screen 0.0s per Pegasus): The video shows a face mask application, not the Lumière Velvet Matte Lipstick as required by the campaign brief."
   ],
   "description": "A woman stands in front of a bathroom mirror applying a white face mask using a brush. She holds a small white bowl in one hand and carefully applies the product to her cheeks and chin while looking into the mirror. The video focuses entirely on the face mask application process.",
   "relevance": {
@@ -32,9 +32,10 @@
     "asset_id": "6b06d529cfd36fe301e84d21",
     "analysis_model": "pegasus1.6",
     "index_model": "marengo3.0",
-    "prompt_version": "v1",
+    "prompt_version": "unrecorded (cached)",
+    "pegasus_cached": true,
     "policy_version": 1,
-    "policy_sha256": "395f11a82bac",
-    "run_at": "2026-11-25T18:26:10.344208+00:00"
+    "policy_sha256": "9977da33a2bc",
+    "run_at": "2026-11-26T03:47:50.787199+00:00"
   }
 }

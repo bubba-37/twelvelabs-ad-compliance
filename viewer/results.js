@@ -13,7 +13,7 @@ const RESULTS = [
       "label": "ON_BRIEF"
     },
     "marengo_relevance": {
-      "product_seconds": 32.0,
+      "product_seconds": 16.0,
       "matches": [
         {
           "query": "applying lipstick to lips",
@@ -51,10 +51,11 @@ const RESULTS = [
       "asset_id": "6b06d472940759a5eecbd020",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:02.910903+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:44.095411+00:00"
     }
   },
   {
@@ -71,7 +72,7 @@ const RESULTS = [
       "label": "ON_BRIEF"
     },
     "marengo_relevance": {
-      "product_seconds": 17.1,
+      "product_seconds": 8.5,
       "matches": [
         {
           "query": "applying lipstick to lips",
@@ -83,7 +84,7 @@ const RESULTS = [
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 8.533332824707031,
-          "rank": 11
+          "rank": 13
         }
       ]
     },
@@ -97,10 +98,11 @@ const RESULTS = [
       "asset_id": "6b06e12ece1f5339fb0abd8b",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:03.642171+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:44.785815+00:00"
     }
   },
   {
@@ -117,7 +119,7 @@ const RESULTS = [
       "label": "ON_BRIEF"
     },
     "marengo_relevance": {
-      "product_seconds": 30.0,
+      "product_seconds": 15.0,
       "matches": [
         {
           "query": "applying lipstick to lips",
@@ -141,7 +143,7 @@ const RESULTS = [
           "query": "close-up of a lipstick bullet",
           "start": 7.933332920074463,
           "end": 15.0,
-          "rank": 7
+          "rank": 9
         }
       ]
     },
@@ -155,10 +157,11 @@ const RESULTS = [
       "asset_id": "6b06d4982316e8b3121da3d3",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:05.103783+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:45.425373+00:00"
     }
   },
   {
@@ -175,19 +178,19 @@ const RESULTS = [
       "label": "ON_BRIEF"
     },
     "marengo_relevance": {
-      "product_seconds": 24.0,
+      "product_seconds": 12.0,
       "matches": [
         {
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 6.933332920074463,
-          "rank": 11
+          "rank": 13
         },
         {
           "query": "applying lipstick to lips",
           "start": 6.933332920074463,
           "end": 12.0,
-          "rank": 16
+          "rank": 17
         },
         {
           "query": "close-up of a lipstick bullet",
@@ -213,17 +216,18 @@ const RESULTS = [
       "asset_id": "6b06d4a9269d9b87d5bcbcef",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:05.737940+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:46.068025+00:00"
     }
   },
   {
     "file": "05_offbrief_clickbait.mp4",
     "decision": "BLOCK",
     "reasons": [
-      "BLOCK: off-brief (relevance 0): The video content is entirely unrelated to the campaign brief, featuring gaming scenes with no mention, application, or visual presence of Lumière Velvet Matte Lipstick."
+      "BLOCK: off-brief (relevance 0, product on screen 0.0s per Pegasus): The video content is entirely unrelated to the campaign brief, featuring gaming scenes with no mention, application, or visual presence of Lumière Velvet Matte Lipstick."
     ],
     "description": "The video opens in a dimly lit gaming lounge where several people are seated at computers, wearing headsets and playing video games. The scene then cuts to a living room at night where three men are sitting on a couch, intensely playing a video game on a console while eating snacks and drinking soda. The video focuses entirely on gaming activities and social interaction.",
     "relevance": {
@@ -246,10 +250,11 @@ const RESULTS = [
       "asset_id": "6b06d4ba940759a5eecbd048",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:06.380439+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:46.714041+00:00"
     }
   },
   {
@@ -266,7 +271,7 @@ const RESULTS = [
       "label": "WEAK"
     },
     "marengo_relevance": {
-      "product_seconds": 13.9,
+      "product_seconds": 6.9,
       "matches": [
         {
           "query": "applying lipstick to lips",
@@ -292,10 +297,11 @@ const RESULTS = [
       "asset_id": "6b06d4d031690ee85f22aaf2",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:06.926539+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:47.301813+00:00"
     }
   },
   {
@@ -313,7 +319,7 @@ const RESULTS = [
       "label": "ON_BRIEF"
     },
     "marengo_relevance": {
-      "product_seconds": 34.0,
+      "product_seconds": 17.0,
       "matches": [
         {
           "query": "applying lipstick to lips",
@@ -372,10 +378,11 @@ const RESULTS = [
       "asset_id": "6b06d4e12028fde55c7d6aca",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:07.518953+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:48.049028+00:00"
     }
   },
   {
@@ -383,7 +390,8 @@ const RESULTS = [
     "decision": "BLOCK",
     "reasons": [
       "BLOCK: high-severity medical_claims at 3s (conf 1.0): On-screen text reads: 'Cures acne in 3 days'",
-      "BLOCK: high-severity medical_claims at 1s (conf 1.0): Speaker says: 'This not only cleared my acne in three days, but it cured my cancer as well.'"
+      "BLOCK: high-severity medical_claims at 1s (conf 1.0): Speaker says: 'This not only cleared my acne in three days, but it cured my cancer as well.'",
+      "REVIEW: weak campaign relevance (60)"
     ],
     "description": "A woman with short dark hair is shown in a bathroom mirror applying a matte lipstick to her lips using an applicator wand. On-screen text appears identifying the product as 'Lumière Velvet Matte' and then displays a claim stating 'Cures acne in 3 days'. The speaker simultaneously makes verbal claims about the product clearing acne and curing cancer.",
     "relevance": {
@@ -393,7 +401,7 @@ const RESULTS = [
       "label": "WEAK"
     },
     "marengo_relevance": {
-      "product_seconds": 20.0,
+      "product_seconds": 10.0,
       "matches": [
         {
           "query": "applying lipstick to lips",
@@ -440,10 +448,11 @@ const RESULTS = [
       "asset_id": "6b06e13f31690ee85f22b357",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:08.234698+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:48.690788+00:00"
     }
   },
   {
@@ -461,7 +470,7 @@ const RESULTS = [
       "label": "ON_BRIEF"
     },
     "marengo_relevance": {
-      "product_seconds": 24.0,
+      "product_seconds": 12.0,
       "matches": [
         {
           "query": "applying lipstick to lips",
@@ -508,17 +517,19 @@ const RESULTS = [
       "asset_id": "6b06ffde31690ee85f22cf4c",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:08.777544+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:49.336958+00:00"
     }
   },
   {
     "file": "10_drugs_background.mp4",
     "decision": "BLOCK",
     "reasons": [
-      "BLOCK: high-severity drugs_illegal at 11s (conf 0.95): A man is shown heating a spoon over a lighter flame in a dimly lit room. On the table, there are syringes, small bottles, and a bag of powder, clearly depicting the preparation of intravenous drugs."
+      "BLOCK: high-severity drugs_illegal at 11s (conf 0.95): A man is shown heating a spoon over a lighter flame in a dimly lit room. On the table, there are syringes, small bottles, and a bag of powder, clearly depicting the preparation of intravenous drugs.",
+      "REVIEW: weak campaign relevance (40)"
     ],
     "description": "The video begins with a close-up of a woman applying 'Lumière Velvet Matte' lipstick while looking into a mirror. The scene then abruptly cuts to a dimly lit room where a man is heating a spoon over a lighter flame, surrounded by drug paraphernalia including syringes and small bottles on a table. The video briefly returns to the woman finishing her lipstick application before ending.",
     "relevance": {
@@ -528,7 +539,7 @@ const RESULTS = [
       "label": "WEAK"
     },
     "marengo_relevance": {
-      "product_seconds": 44.1,
+      "product_seconds": 22.1,
       "matches": [
         {
           "query": "applying lipstick to lips",
@@ -577,17 +588,18 @@ const RESULTS = [
       "asset_id": "6b06d514940759a5eecbd098",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:09.698044+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:50.156522+00:00"
     }
   },
   {
     "file": "11_weak_skincare.mp4",
     "decision": "BLOCK",
     "reasons": [
-      "BLOCK: off-brief (relevance 0): The video shows a face mask application, not the Lumière Velvet Matte Lipstick as required by the campaign brief."
+      "BLOCK: off-brief (relevance 0, product on screen 0.0s per Pegasus): The video shows a face mask application, not the Lumière Velvet Matte Lipstick as required by the campaign brief."
     ],
     "description": "A woman stands in front of a bathroom mirror applying a white face mask using a brush. She holds a small white bowl in one hand and carefully applies the product to her cheeks and chin while looking into the mirror. The video focuses entirely on the face mask application process.",
     "relevance": {
@@ -617,10 +629,11 @@ const RESULTS = [
       "asset_id": "6b06d529cfd36fe301e84d21",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:10.344208+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:50.787199+00:00"
     }
   },
   {
@@ -637,7 +650,7 @@ const RESULTS = [
       "label": "ON_BRIEF"
     },
     "marengo_relevance": {
-      "product_seconds": 36.0,
+      "product_seconds": 18.0,
       "matches": [
         {
           "query": "applying lipstick to lips",
@@ -649,13 +662,13 @@ const RESULTS = [
           "query": "applying lipstick to lips",
           "start": 9.0,
           "end": 18.0,
-          "rank": 13
+          "rank": 11
         },
         {
           "query": "close-up of a lipstick bullet",
           "start": 0.0,
           "end": 9.0,
-          "rank": 9
+          "rank": 10
         },
         {
           "query": "close-up of a lipstick bullet",
@@ -675,10 +688,11 @@ const RESULTS = [
       "asset_id": "6b06ea5fcfd36fe301e85b0e",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:10.982409+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:51.434334+00:00"
     }
   },
   {
@@ -695,13 +709,13 @@ const RESULTS = [
       "label": "ON_BRIEF"
     },
     "marengo_relevance": {
-      "product_seconds": 26.0,
+      "product_seconds": 13.0,
       "matches": [
         {
           "query": "applying lipstick to lips",
           "start": 0.0,
           "end": 13.0,
-          "rank": 3
+          "rank": 5
         },
         {
           "query": "close-up of a lipstick bullet",
@@ -732,10 +746,11 @@ const RESULTS = [
       "asset_id": "6b0718c431690ee85f22e8be",
       "analysis_model": "pegasus1.6",
       "index_model": "marengo3.0",
-      "prompt_version": "v1",
+      "prompt_version": "unrecorded (cached)",
+      "pegasus_cached": true,
       "policy_version": 1,
-      "policy_sha256": "395f11a82bac",
-      "run_at": "2026-11-25T18:26:11.620779+00:00"
+      "policy_sha256": "9977da33a2bc",
+      "run_at": "2026-11-26T03:47:52.145707+00:00"
     }
   }
 ];

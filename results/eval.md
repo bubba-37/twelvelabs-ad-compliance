@@ -4,7 +4,8 @@ Clips evaluated: 13
 Decision accuracy: 10/13 (77%)
 Relevance label accuracy: 9/13
 Planted violations caught: 7/7
-Mean timestamp error on caught violations: 0.9s
+Mean start-time error on caught violations: 0.00s (max 0.02s)
+Findings not matched to any planted violation (possible false positives): 0
 
 ## Per clip
 
@@ -36,6 +37,6 @@ Mean timestamp error on caught violations: 0.9s
 
 - **04_weak_vlog.mp4**: expected REVIEW, got APPROVE. Reasons: APPROVE: on-brief, no violations above tolerance
 - **06_offbrief_lipstick_craft.mp4**: expected BLOCK, got REVIEW. Reasons: REVIEW: weak campaign relevance (40)
-- **11_weak_skincare.mp4**: expected REVIEW, got BLOCK. Reasons: BLOCK: off-brief (relevance 0): The video shows a face mask application, not the Lumière Velvet Matte Lipstick as required by the campaign brief.
+- **11_weak_skincare.mp4**: expected REVIEW, got BLOCK. Reasons: BLOCK: off-brief (relevance 0, product on screen 0.0s per Pegasus): The video shows a face mask application, not the Lumière Velvet Matte Lipstick as required by the campaign brief.
 
 _Small hand-built test set: a smoke test, not a benchmark. A real POC would use hundreds of customer-labeled videos._

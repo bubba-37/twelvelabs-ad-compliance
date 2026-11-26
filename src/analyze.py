@@ -45,6 +45,7 @@ def analyze(asset_id, policy=None, max_tokens=4096, _retried=False):
         return analyze(asset_id, policy, max_tokens * 2, _retried=True)
     out = json.loads(res.data)
     n = sentence_count(out.get("description", ""))
+    out["_prompt_version"] = PROMPT_VERSION
     out["_checks"] = {"description_sentences": n, "description_ok": 2 <= n <= 5,
                       "finish_reason": res.finish_reason}
     return out

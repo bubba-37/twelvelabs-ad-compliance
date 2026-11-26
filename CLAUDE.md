@@ -16,9 +16,9 @@ making changes — they're the source of truth for the design, not this file.
   `policy.yaml` — the model never makes the final call, it only supplies evidence.
 
 ## Status / known risk
-The code was written against the TwelveLabs docs but **has never been run against the real
-API**. Treat it as untested: expect SDK parameter/attribute mismatches on first run (wrong
-method names, wrong kwarg names, response fields that don't exist, etc.).
+The code was written against the TwelveLabs docs and has since been run end-to-end against
+the real API (twelvelabs 1.3.8) for all 13 clips. If an SDK upgrade breaks something, expect
+parameter/attribute mismatches (method names, kwarg names, response fields).
 
 When something fails:
 1. Don't guess a fix from the docs or from memory of other TwelveLabs SDK versions.
@@ -43,7 +43,7 @@ in `src/` (`client.assets.create/retrieve`, `client.indexes.create`,
 package's real signatures. Re-verify against the installed package if the `twelvelabs` version
 changes.
 
-`src/ingest.py` has now been run end-to-end against the real API for all 11 clips in
+`src/ingest.py` has now been run end-to-end against the real API for all clips in
 `clips/` with no SDK mismatches — asset upload, indexing, and `wait_ready` polling all worked
 as written. One open question from the code's own comments is now settled: in
 `client.search.query` results, `SearchItem.video_id` always equals the clip's

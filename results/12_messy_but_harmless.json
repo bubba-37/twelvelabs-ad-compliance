@@ -12,7 +12,7 @@
     "label": "ON_BRIEF"
   },
   "marengo_relevance": {
-    "product_seconds": 36.0,
+    "product_seconds": 18.0,
     "matches": [
       {
         "query": "applying lipstick to lips",
@@ -24,13 +24,13 @@
         "query": "applying lipstick to lips",
         "start": 9.0,
         "end": 18.0,
-        "rank": 13
+        "rank": 11
       },
       {
         "query": "close-up of a lipstick bullet",
         "start": 0.0,
         "end": 9.0,
-        "rank": 9
+        "rank": 10
       },
       {
         "query": "close-up of a lipstick bullet",
@@ -50,9 +50,10 @@
     "asset_id": "6b06ea5fcfd36fe301e85b0e",
     "analysis_model": "pegasus1.6",
     "index_model": "marengo3.0",
-    "prompt_version": "v1",
+    "prompt_version": "unrecorded (cached)",
+    "pegasus_cached": true,
     "policy_version": 1,
-    "policy_sha256": "395f11a82bac",
-    "run_at": "2026-11-25T18:26:10.982409+00:00"
+    "policy_sha256": "9977da33a2bc",
+    "run_at": "2026-11-26T03:47:51.434334+00:00"
   }
 }

@@ -17,7 +17,8 @@ relevance:
   on_brief_min: 70   # Pegasus score >= 70 -> ON_BRIEF
   weak_min: 40       # 40-69 -> WEAK (REVIEW); below 40 -> OFF_BRIEF (BLOCK)
   # If Pegasus says ON_BRIEF but Marengo finds less than this many seconds of
-  # product footage (or vice versa), route to REVIEW as a model disagreement.
+  # product footage, route to REVIEW as a model disagreement. (One direction only; on the
+  # current test set Marengo matches every clip end to end, so this has not yet fired.)
   marengo_min_product_seconds: 3
 
 thresholds:

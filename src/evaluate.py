@@ -23,13 +23,14 @@ def parse_violations(s):
         cat, _, rng = part.partition(":")
         m = RANGE_RE.match(rng)
         if not m:
-            continue  # placeholder like START-END not filled in yet
+            print(f"warning: skipping unparseable violation entry: {part!r}")
+            continue
         out.append((cat.strip(), float(m.group(1)), float(m.group(2))))
     return out
 
 
 rows, confusion, misses = [], Counter(), []
-planted = caught = 0
+planted = caught = unmatched_findings = 0
 ts_errors, rel_correct, rel_total = [], 0, 0
 
 for m in csv.DictReader(MANIFEST_PATH.open()):
@@ -45,17 +46,32 @@ for m in csv.DictReader(MANIFEST_PATH.open()):
         rel_total += 1
         rel_correct += m["expected_relevance"].strip() == r["relevance"].get("label")
 
-    found = []
-    for cat, s, e in parse_violations(m["violations"]):
+    # One-to-one matching: each finding can satisfy at most one planted violation, and each
+    # violation takes the closest-starting unused finding of its category that overlaps it.
+    found, used = [], set()
+    planted_here = parse_violations(m["violations"])
+    for cat, s, e in planted_here:
         planted += 1
-        match = [f for f in r["findings"]
-                 if f["category"] == cat and f["start_sec"] - tol <= e and f["end_sec"] + tol >= s]
+        match = [(abs(f["start_sec"] - s), i) for i, f in enumerate(r["findings"])
+                 if i not in used and f["category"] == cat
+                 and f["start_sec"] - tol <= e and f["end_sec"] + tol >= s]
         if match:
+            err, i = min(match)
+            used.add(i)
             caught += 1
-            ts_errors.append(abs(match[0]["start_sec"] - s))
+            ts_errors.append(err)
             found.append(f"{cat} caught")
         else:
             found.append(f"{cat} MISSED")
+    # A second finding inside an already-matched planted window (e.g. two swear words in one
+    # labeled stretch of speech) isn't a false positive, so only count findings that overlap
+    # no planted violation of their category.
+    extra = sum(1 for i, f in enumerate(r["findings"]) if i not in used and not any(
+        f["category"] == cat and f["start_sec"] - tol <= e and f["end_sec"] + tol >= s
+        for cat, s, e in planted_here))
+    unmatched_findings += extra
+    if extra:
+        found.append(f"{extra} finding(s) with no planted violation")
 
     ok = exp == got
     rows.append(f"| {m['file']} | {exp} | {got} | {'yes' if ok else '**no**'} | "
@@ -72,8 +88,9 @@ lines = [
     f"Decision accuracy: {correct}/{n}" + (f" ({correct / n:.0%})" if n else ""),
     f"Relevance label accuracy: {rel_correct}/{rel_total}",
     f"Planted violations caught: {caught}/{planted}",
-    (f"Mean timestamp error on caught violations: {sum(ts_errors) / len(ts_errors):.1f}s"
-     if ts_errors else "Mean timestamp error: n/a"),
+    (f"Mean start-time error on caught violations: {sum(ts_errors) / len(ts_errors):.2f}s "
+     f"(max {max(ts_errors):.2f}s)" if ts_errors else "Mean timestamp error: n/a"),
+    f"Findings not matched to any planted violation (possible false positives): {unmatched_findings}",
     "",
     "## Per clip",
     "",

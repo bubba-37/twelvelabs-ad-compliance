@@ -27,7 +27,8 @@ args = [a for a in sys.argv[1:] if not a.startswith("--")]
 fresh = "--fresh" in sys.argv
 
 policy = load_policy()
-policy_hash = hashlib.sha256(POLICY_PATH.read_bytes()).hexdigest()[:12]
+# Hash the parsed policy, not the file bytes, so comment-only edits don't change the audit hash.
+policy_hash = hashlib.sha256(json.dumps(policy, sort_keys=True).encode()).hexdigest()[:12]
 ids = load_ids()
 clips = args or sorted(ids)
 
@@ -40,9 +41,11 @@ for name in clips:
 
     if raw_path.exists() and not fresh:
         report = json.loads(raw_path.read_text())
+        cached = True
         print("  pegasus: cached")
     else:
         report = analyze(entry["asset_id"], policy)
+        cached = False
         raw_path.write_text(json.dumps(report, indent=2))
         print("  pegasus: done")
 
@@ -63,7 +66,10 @@ for name in clips:
             "asset_id": entry["asset_id"],
             "analysis_model": PEGASUS_MODEL,
             "index_model": INDEX_MODEL,
-            "prompt_version": PROMPT_VERSION,
+            # A cached Pegasus result keeps the prompt version it was produced with; use
+            # --fresh to regenerate everything under the current prompt and policy.
+            "prompt_version": report.get("_prompt_version", "unrecorded (cached)" if cached else PROMPT_VERSION),
+            "pegasus_cached": cached,
             "policy_version": policy.get("version"),
             "policy_sha256": policy_hash,
             "run_at": datetime.now(timezone.utc).isoformat(),

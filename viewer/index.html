@@ -343,10 +343,15 @@
         const item = document.createElement('div');
         item.className = 'clip-item';
         item.innerHTML = `
-          <span class="name">${r.file}</span>
+          <span class="name">${escapeHtml(r.file)}</span>
           <span class="badge ${r.decision}">${r.decision}</span>
         `;
+        item.tabIndex = 0;
+        item.setAttribute('role', 'button');
         item.addEventListener('click', () => selectClip(i));
+        item.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectClip(i); }
+        });
         clipListEl.appendChild(item);
       });
     }
@@ -376,7 +381,7 @@
           <div class="headline">
             <div class="filename">${r.file}</div>
             <h2><span class="badge ${r.decision}">${r.decision}</span></h2>
-            <div class="description">${r.description || ''}</div>
+            <div class="description">${escapeHtml(r.description || '')}</div>
           </div>
         </div>
 
@@ -397,7 +402,7 @@
               <div class="value">${marengo.product_seconds ?? '—'}s</div>
             </div>
           </div>
-          <div class="rationale">${rel.rationale || ''}</div>
+          <div class="rationale">${escapeHtml(rel.rationale || '')}</div>
         </section>
 
         <section>
@@ -410,9 +415,9 @@
         <section>
           <h3>Findings (${findings.length})</h3>
           ${findings.length ? findings.map((f, idx) => `
-            <div class="finding" data-start="${f.start_sec}">
+            <div class="finding" data-start="${f.start_sec}" tabindex="0" role="button">
               <div class="finding-top">
-                <span class="finding-category">${f.category}</span>
+                <span class="finding-category">${escapeHtml(f.category)}</span>
                 ${findingPill(f.severity)}
                 <span class="pill modality">${f.modality}</span>
                 <span class="finding-time">${fmtTime(f.start_sec)} – ${fmtTime(f.end_sec)}</span>
@@ -449,12 +454,16 @@
       }, { once: true });
 
       detailEl.querySelectorAll('.finding').forEach(el => {
-        el.addEventListener('click', () => {
+        const seek = () => {
           const video = document.getElementById('player');
           if (!video) return; // showing the still-frame fallback instead - nothing to seek
           const t = parseFloat(el.dataset.start) || 0;
           video.currentTime = t;
           video.play().catch(() => {});
+        };
+        el.addEventListener('click', seek);
+        el.addEventListener('keydown', e => {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); seek(); }
         });
       });
     }

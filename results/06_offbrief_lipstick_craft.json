@@ -12,7 +12,7 @@
     "label": "WEAK"
   },
   "marengo_relevance": {
-    "product_seconds": 13.9,
+    "product_seconds": 6.9,
     "matches": [
       {
         "query": "applying lipstick to lips",
@@ -38,9 +38,10 @@
     "asset_id": "6b06d4d031690ee85f22aaf2",
     "analysis_model": "pegasus1.6",
     "index_model": "marengo3.0",
-    "prompt_version": "v1",
+    "prompt_version": "unrecorded (cached)",
+    "pegasus_cached": true,
     "policy_version": 1,
-    "policy_sha256": "395f11a82bac",
-    "run_at": "2026-11-25T18:26:06.926539+00:00"
+    "policy_sha256": "9977da33a2bc",
+    "run_at": "2026-11-26T03:47:47.301813+00:00"
   }
 }

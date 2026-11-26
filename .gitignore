@@ -8,3 +8,13 @@ clips/*.mov
 clips/raw/*.mp4
 clips/raw/*.mov
 clips/raw/*.m4a
+
+# Local tooling and interview prep, not part of the project
+AGENTS.md
+.agents/
+.claude/
+skills-lock.json
+Submissions/
+notes/deck/
+notes/ScottKline_Submission.txt
+notes/recruiter_email_draft.txt
